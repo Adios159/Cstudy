@@ -1,0 +1,24 @@
+#include "student.h"
+
+Student::Student() 
+{
+
+}
+
+Student::Student(string name, int score)
+:name(name), score(score)
+{
+    char temp[] = {'F', 'F', 'F', 'F', 'F', 'F', 'D', 'C', 'B', 'A', 'A'};
+    grade = temp[score / 10];
+}
+
+Student::~Student() 
+{
+
+}
+
+void Student::print() {
+    cout << setw(12) << left << name;
+    cout << setw(18) << right << score;
+    cout << setw(8) << right << grade << endl;
+}

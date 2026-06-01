@@ -1,0 +1,16 @@
+# 실행 파일
+*.exe
+*.out
+*.o
+
+# VSCode 설정 (팀 프로젝트면 올릴 수도 있으니 상황에 따라)
+.vscode/
+
+# 디버그 관련
+*.pdb
+*.ilk
+
+# CMake 쓴다면
+build/
+CMakeCache.txt
+CMakeFiles/
