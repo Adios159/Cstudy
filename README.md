@@ -11,7 +11,7 @@ C_STUDY/
 ├── atcoder/                # AtCoder 문제풀이
 ├── codeforces/             # Codeforces 문제풀이
 ├── expert_c/               # Expert C 학습 자료
-├── forzan_cpp/             # C++ 심화 학습
+├── forzan_cpp/             # C++ 기본 개념 학습
 ├── .gitignore
 └── README.md
 ```
@@ -26,7 +26,7 @@ C_STUDY/
 | `atcoder/` | [AtCoder](https://atcoder.jp/) 문제 풀이 코드 |
 | `codeforces/` | [Codeforces](https://codeforces.com/) 문제 풀이 코드 |
 | `expert_c/` | Expert C 학습 관련 예제 및 실습 코드 |
-| `forzan_cpp/` | C++ 심화 개념 학습 및 실습 코드 |
+| `forzan_cpp/` | 포르잔 C++ 학습 및 실습 코드 |
 
 ---
 
