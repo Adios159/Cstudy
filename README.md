@@ -8,10 +8,14 @@ C/C++ 알고리즘 문제풀이 및 학습을 위한 저장소입니다.
 
 ```
 C_STUDY/
-├── atcoder/                # AtCoder 문제풀이
+├── atcoder/                # AtCoder 문제풀이 (ABC, AWC 시리즈)
 ├── codeforces/             # Codeforces 문제풀이
+├── DataStructure/          # 자료구조 직접 구현 (C)
 ├── expert_c/               # Expert C 학습 자료
-├── forzan_cpp/             # C++ 기본 개념 학습
+│   └── ch1/                # 1장 예제 코드
+├── forzan_cpp/             # 포르잔 C++ 학습 코드
+│   └── ch8/                # 8장 예제 및 실습
+├── .vscode/                # VSCode 빌드 설정
 ├── .gitignore
 └── README.md
 ```
@@ -23,8 +27,9 @@ C_STUDY/
 | 폴더 | 설명 |
 |------|------|
 | `.vscode/` | VSCode 빌드 및 디버그 설정 파일 (`tasks.json`) |
-| `atcoder/` | [AtCoder](https://atcoder.jp/) 문제 풀이 코드 |
+| `atcoder/` | [AtCoder](https://atcoder.jp/) 문제 풀이 코드 (ABC 시리즈, AWC 시리즈) |
 | `codeforces/` | [Codeforces](https://codeforces.com/) 문제 풀이 코드 |
+| `DataStructure/` | 연결 리스트 등 자료구조를 C로 직접 구현한 코드 |
 | `expert_c/` | Expert C 학습 관련 예제 및 실습 코드 |
 | `forzan_cpp/` | 포르잔 C++ 학습 및 실습 코드 |
 
@@ -35,7 +40,7 @@ C_STUDY/
 - **언어**: C / C++
 - **에디터**: Visual Studio Code
 - **컴파일러**: GCC (g++)
-- **플랫폼**: Windows 64-bit
+- **플랫폼**: Windows11 64-bit
 
 ---
 
@@ -66,3 +71,5 @@ g++ -std=c++17 -O2 -o solution solution.cpp
 - [ ] Codeforces 레이팅 획득
 - [ ] C++ STL 및 알고리즘 숙달
 - [ ] 자료구조 (연결리스트, 트리, 큐 등) 직접 구현
+- [ ] 전문가를 위한 C/C++ 스터디 시작
+- [ ] 소켓 프로그래밍 및 이를 활용한 게임 서버 프로그래밍
