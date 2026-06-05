@@ -8,16 +8,21 @@ C/C++ 알고리즘 문제풀이 및 학습을 위한 저장소입니다.
 
 ```
 C_STUDY/
-├── C/                          # C 언어 학습
-│   ├── DataStructure/          # 자료구조 직접 구현
-│   └── expert_c/               # Expert C 학습 자료
-│       └── ch1/                # 1장 예제 코드
-├── C++/                        # C++ 학습 및 문제풀이
-│   ├── atcoder/                # AtCoder 문제풀이 (ABC, AWC 시리즈)
-│   ├── codeforces/             # Codeforces 문제풀이
-│   └── forzan_cpp/             # 포르잔 C++ 학습 코드
-│       └── ch8/                # 8장 예제 및 실습
-├── .vscode/                    # VSCode 빌드 설정
+├── C/                              # C 언어 학습
+│   ├── DataStructure/              # 자료구조 직접 구현
+│   │   ├── LinkedList/             # 연결 리스트 (단순/이중/원형 등)
+│   │   ├── Stack/                  # 스택 구현 및 응용
+│   │   └── queue/                  # 큐 구현 및 응용
+│   └── expert_c/                   # Expert C 학습 자료
+│       └── ch1/                    # 1장 예제 코드
+├── C++/                            # C++ 학습 및 문제풀이
+│   ├── HighendC++/                 # 고급 C++ 학습
+│   │   └── ch5/                    # 5장 예제 코드
+│   ├── atcoder/                    # AtCoder 문제풀이 (ABC, AWC 시리즈)
+│   ├── codeforces/                 # Codeforces 문제풀이
+│   └── forzan_cpp/                 # 포르잔 C++ 학습 코드
+│       └── ch8/                    # 8장 예제 및 실습
+├── .vscode/                        # VSCode 빌드 설정
 ├── .gitignore
 └── README.md
 ```
@@ -29,8 +34,11 @@ C_STUDY/
 | 폴더 | 설명 |
 |------|------|
 | `.vscode/` | VSCode 빌드 및 디버그 설정 파일 (`tasks.json`) |
-| `C/DataStructure/` | 연결 리스트, 원형 리스트, 이중 연결 리스트 등 자료구조를 C로 직접 구현 |
+| `C/DataStructure/LinkedList/` | 단순/이중/원형 연결 리스트, 문자열·큐·스택 응용, 다항식·MP3 시뮬레이션 등 구현 |
+| `C/DataStructure/Stack/` | 배열 및 동적 스택 구현, 괄호 검사, 중위→후위 변환, 후위 계산 |
+| `C/DataStructure/queue/` | 선형·원형 큐, 덱, 은행 시뮬레이션, 버퍼 시뮬레이션 구현 |
 | `C/expert_c/` | Expert C 학습 관련 예제 및 실습 코드 |
+| `C++/HighendC++/` | 고급 C++ 학습 교재 예제 코드 |
 | `C++/atcoder/` | [AtCoder](https://atcoder.jp/) 문제 풀이 코드 (ABC 시리즈, AWC 시리즈) |
 | `C++/codeforces/` | [Codeforces](https://codeforces.com/) 문제 풀이 코드 |
 | `C++/forzan_cpp/` | 포르잔 C++ 학습 및 실습 코드 |
