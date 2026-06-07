@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#define TRUE 1
+#define FALSE 0
 
 typedef int element;
 typedef struct ListNode{
@@ -52,6 +54,15 @@ void print_list(ListNode *head) {
      printf("NULL \n");
 }
 
+element find_data(ListNode* head, element search) {
+    for(ListNode *p = head; p != NULL; p = p->link) {
+        if(p->data == search) {   
+            return TRUE;
+        }
+    }
+    return FALSE;   
+}
+
 int main(void) {
     ListNode *head = NULL;
 
@@ -59,6 +70,20 @@ int main(void) {
         head = insert_first(head, i);
         print_list(head);
     }
+    printf("\n");
+
+    if (find_data(head, 3)) 
+        printf("List have data\n");
+    else
+        printf("List do not have data\n");
+
+    if (find_data(head, 10)) 
+        printf("List have data\n");
+    else
+        printf("List do not have data\n");
+
+
+    printf("\n");
 
     for(int i = 0; i < 5; i++) {
         head = delete_first(head);

@@ -52,6 +52,21 @@ void print_list(ListNode *head) {
      printf("NULL \n");
 }
 
+void find_max_min(ListNode* head) {
+    int max = head->data;
+    int min = head->data;
+    for(ListNode *p = head; p != NULL; p = p->link) {
+        if(p->data > max) {
+            max = p->data;
+        }
+        if(p->data < min) {
+            min = p->data;
+        }
+    }
+    printf("Max data: %d\nMin data: %d\n", max, min);
+
+}
+
 int main(void) {
     ListNode *head = NULL;
 
@@ -59,6 +74,8 @@ int main(void) {
         head = insert_first(head, i);
         print_list(head);
     }
+
+    find_max_min(head);
 
     for(int i = 0; i < 5; i++) {
         head = delete_first(head);

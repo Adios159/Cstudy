@@ -52,18 +52,46 @@ void print_list(ListNode *head) {
      printf("NULL \n");
 }
 
+void alternate_list(ListNode* list1, ListNode* list2, ListNode* result)
+{
+    ListNode* p = list1;
+    ListNode* q = list2;
+    ListNode* tail = result;
+
+    while(p != NULL || q != NULL) {
+        if(p != NULL) {
+            insert(result, tail, p->data);
+            tail = tail->link;
+            p = p->link;
+        }
+        if(q != NULL) {
+            insert(result, tail, q->data);
+            tail = tail->link;
+            q = q->link;
+        }
+    }
+}
+
 int main(void) {
-    ListNode *head = NULL;
+    ListNode *head1 = NULL;
+    ListNode *head2 = NULL;
+    ListNode *head3 = (ListNode*)malloc(sizeof(ListNode));
+    head3->link = NULL;
 
     for(int i = 0; i < 5; i++) {
-        head = insert_first(head, i);
-        print_list(head);
+        head1 = insert_first(head1, 4 - i);
+        print_list(head1);
     }
+    printf("\n");
 
-    for(int i = 0; i < 5; i++) {
-        head = delete_first(head);
-        print_list(head);
+    for(int i = 5; i < 10; i++) {
+        head2 = insert_first(head2, 4 - i);
+        print_list(head2);
     }
+    printf("\n");
+
+    alternate_list(head1, head2, head3);
+    print_list(head3->link);
 
     return 0;
 }
