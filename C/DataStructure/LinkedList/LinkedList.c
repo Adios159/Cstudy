@@ -56,7 +56,7 @@ int main(void) {
     ListNode *head = NULL;
 
     for(int i = 0; i < 5; i++) {
-        head = insert_firat(head, i);
+        head = insert_first(head, i);
         print_list(head);
     }
 
