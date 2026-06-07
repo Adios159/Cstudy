@@ -10,18 +10,24 @@ C/C++ 알고리즘 문제풀이 및 학습을 위한 저장소입니다.
 C_STUDY/
 ├── C/                              # C 언어 학습
 │   ├── DataStructure/              # 자료구조 직접 구현
-│   │   ├── LinkedList/             # 연결 리스트 (단순/이중/원형 등)
+│   │   ├── LinkedList/             # 연결 리스트 (단순/이중/원형 등) 및 응용
 │   │   ├── Stack/                  # 스택 구현 및 응용
 │   │   └── queue/                  # 큐 구현 및 응용
 │   └── expert_c/                   # Expert C 학습 자료
 │       └── ch1/                    # 1장 예제 코드
 ├── C++/                            # C++ 학습 및 문제풀이
 │   ├── HighendC++/                 # 명품 C++ 교재 학습
-│   │   └── ch5/                    # 5장 예제 코드
+│   │   ├── ch5/                    # 5장 예제 코드
+│   │   ├── ch6/                    # 6장 예제 코드
+│   │   └── ch7/                    # 7장 예제 코드
+│   ├── expertC++/                  # Expert C++ 학습 자료
 │   ├── atcoder/                    # AtCoder 문제풀이 (ABC, AWC 시리즈)
 │   ├── codeforces/                 # Codeforces 문제풀이
 │   └── forzan_cpp/                 # 포르잔 C++ 학습 코드
 │       └── ch8/                    # 8장 예제 및 실습
+│           ├── prg8-2/             # 파일 입출력 실습
+│           ├── prg8-3/             # 파일 입출력 실습
+│           └── prg8-10/            # 다중 파일 클래스 실습
 ├── .vscode/                        # VSCode 빌드 설정
 ├── .gitignore
 └── README.md
@@ -38,7 +44,8 @@ C_STUDY/
 | `C/DataStructure/Stack/` | 배열 및 동적 스택 구현, 괄호 검사, 중위→후위 변환, 후위 계산 |
 | `C/DataStructure/queue/` | 선형·원형 큐, 덱, 은행 시뮬레이션, 버퍼 시뮬레이션 구현 |
 | `C/expert_c/` | Expert C 학습 관련 예제 및 실습 코드 |
-| `C++/HighendC++/` | 명품 C++ 학습 교재 예제 코드 |
+| `C++/HighendC++/` | 명품 C++ 교재 학습 예제 코드 (ch5 ~ ch7) |
+| `C++/expertC++/` | Expert C++ 학습 자료 |
 | `C++/atcoder/` | [AtCoder](https://atcoder.jp/) 문제 풀이 코드 (ABC 시리즈, AWC 시리즈) |
 | `C++/codeforces/` | [Codeforces](https://codeforces.com/) 문제 풀이 코드 |
 | `C++/forzan_cpp/` | 포르잔 C++ 학습 및 실습 코드 |
