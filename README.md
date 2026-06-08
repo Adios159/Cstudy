@@ -17,9 +17,15 @@ C_STUDY/
 │       └── ch1/                    # 1장 예제 코드
 ├── C++/                            # C++ 학습 및 문제풀이
 │   ├── HighendC++/                 # 명품 C++ 교재 학습
-│   │   ├── ch5/                    # 5장 예제 코드
-│   │   ├── ch6/                    # 6장 예제 코드
-│   │   └── ch7/                    # 7장 예제 코드
+│   │   ├── ch5/                    # 5장
+│   │   │   ├── example/            # 예제 코드
+│   │   │   └── exercise/           # 연습문제
+│   │   ├── ch6/                    # 6장
+│   │   │   ├── example/            # 예제 코드
+│   │   │   └── exercise/           # 연습문제
+│   │   └── ch7/                    # 7장
+│   │       ├── example/            # 예제 코드
+│   │       └── exercise/           # 연습문제
 │   ├── expertC++/                  # Expert C++ 학습 자료
 │   ├── atcoder/                    # AtCoder 문제풀이 (ABC, AWC 시리즈)
 │   ├── codeforces/                 # Codeforces 문제풀이
@@ -29,6 +35,7 @@ C_STUDY/
 │           ├── prg8-3/             # 파일 입출력 실습
 │           └── prg8-10/            # 다중 파일 클래스 실습
 ├── .vscode/                        # VSCode 빌드 설정
+├── CLAUDE.md
 ├── .gitignore
 └── README.md
 ```
