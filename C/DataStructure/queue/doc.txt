@@ -1,0 +1,3 @@
+Perfect_C 20
+Toeic_basic 15
+Japanese_grammer 10
