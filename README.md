@@ -36,18 +36,20 @@ C_STUDY/
 │   │   │   ├── example/            # 예제 코드 (11개)
 │   │   │   └── exercise/           # 연습문제 (7개)
 │   │   ├── ch6/                    # 클래스와 객체
-│   │   │   ├── example/            # 예제 코드 (11개)
+│   │   │   ├── example/            # 예제 코드 (8개)
 │   │   │   └── exercise/           # 연습문제 (6개)
 │   │   └── ch7/                    # 생성자와 소멸자
-│   │       ├── example/            # 예제 코드 (11개)
+│   │       ├── example/            # 예제 코드 (10개)
 │   │       └── exercise/           # 연습문제 (6개)
-│   ├── expertC++/                  # Expert C++ 학습 자료
-│   ├── atcoder/                    # AtCoder 문제풀이
-│   ├── codeforces/                 # Codeforces 문제풀이
+│   ├── PS/                         # 알고리즘 문제풀이
+│   │   ├── atcoder/                # AtCoder 문제풀이
+│   │   │   ├── abc/                # ABC 시리즈 (대회별 하위 폴더)
+│   │   │   └── awc/                # AWC 시리즈 (대회별 하위 폴더)
+│   │   └── codeforces/             # Codeforces 문제풀이
 │   └── forzan_cpp/                 # 포르잔 C++ 학습 코드
-│       ├── ch8/                    # 파일 I/O, 다중 파일 클래스 설계
-│       └── (ch4, ch5 예제)
-├── .vscode/                        # VSCode 빌드 설정
+│       ├── ch4/                    # ch4 예제
+│       ├── ch5/                    # ch5 예제
+│       └── ch8/                    # 파일 I/O, 다중 파일 클래스 설계
 ├── CLAUDE.md
 ├── .gitignore
 └── README.md
@@ -64,9 +66,9 @@ C_STUDY/
 | `C/DataStructure/queue/` | 선형·원형 큐, 덱, 은행 시뮬레이션, 버퍼 시뮬레이션, 프린트 스풀러 구현 |
 | `C/expert_c/ch1/` | Expert C 1장 예제 (포인터, 선언 해석 등) |
 | `C++/HighendC++/` | 명품 C++ 교재 ch5~ch7 예제 및 연습문제 |
-| `C++/expertC++/` | Expert C++ 학습 자료 |
-| `C++/atcoder/` | [AtCoder](https://atcoder.jp/) ABC/AWC 시리즈 문제 풀이 |
-| `C++/codeforces/` | [Codeforces](https://codeforces.com/) 문제 풀이 |
+| `C++/PS/atcoder/abc/` | [AtCoder](https://atcoder.jp/) ABC 시리즈 문제 풀이 (대회별 하위 폴더) |
+| `C++/PS/atcoder/awc/` | [AtCoder](https://atcoder.jp/) AWC 시리즈 문제 풀이 (대회별 하위 폴더) |
+| `C++/PS/codeforces/` | [Codeforces](https://codeforces.com/) 문제 풀이 |
 | `C++/forzan_cpp/` | 포르잔 C++ ch4~ch8 예제 및 실습 |
 
 ---
@@ -109,6 +111,7 @@ gcc -o program program.c
 | ABC456 B, C | B, C |
 | ABC457 B, C, D | B, C, D |
 | ABC460 A, B | A, B |
+| ABC462 A, B, C | A, B, C |
 | AWC006 1A, 1B, 2A, 2B, 3A, 3B, 8 | — |
 | AWC008 1A, 1B, 1C | — |
 
@@ -155,6 +158,6 @@ gcc -o program program.c
 | 희소 행렬 | `sparseMatrix.c` | 연결 리스트로 0이 많은 행렬 표현 |
 | MP3 플레이어 | `mpthree.c` | 이중 연결 리스트로 재생목록 구현 |
 | 괄호 검사기 | `checkBrackets.c` | 스택으로 괄호 유효성 검사 |
-| 수식 변환·계산기 | `infixToPosftfix.c`, `calcPosfix.c` | 중위→후위 변환 후 계산 |
-| 은행 시뮬레이터 | `bamkSim.c`, `BankSim2Banker.c` | 큐로 창구 대기열 시뮬레이션 |
+| 수식 변환·계산기 | `infixToPostfix.c`, `calcPosfix.c` | 중위→후위 변환 후 계산 |
+| 은행 시뮬레이터 | `bankSim.c`, `BankSim2Banker.c` | 큐로 창구 대기열 시뮬레이션 |
 | 프린트 스풀러 | `PrintSpooler.c` | 큐 기반 출력 순서 관리 |
