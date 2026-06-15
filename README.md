@@ -44,8 +44,11 @@ C_STUDY/
 │   │   ├── ch8/                    # 상속
 │   │   │   ├── example/            # 예제 코드 (4개)
 │   │   │   └── exercise/           # 연습문제 (5개)
-│   │   └── ch9/                    # 가상 함수와 추상 클래스
-│   │       └── example/            # 예제 코드 (7개)
+│   │   ├── ch9/                    # 가상 함수와 추상 클래스
+│   │   │   ├── example/            # 예제 코드 (7개)
+│   │   │   └── exercise/           # 연습문제 (2개)
+│   │   └── ch10/                   # 템플릿과 STL
+│   │       └── example/            # 예제 코드 (2개)
 │   ├── PS/                         # 알고리즘 문제풀이
 │   │   ├── atcoder/                # AtCoder 문제풀이
 │   │   │   ├── abc/                # ABC 시리즈 (대회별 하위 폴더)
@@ -70,9 +73,10 @@ C_STUDY/
 | `C/DataStructure/Stack/` | 배열·동적 스택 구현, 괄호 검사, 중위→후위 변환, 후위 계산 |
 | `C/DataStructure/queue/` | 선형·원형 큐, 덱, 은행 시뮬레이션, 버퍼 시뮬레이션, 프린트 스풀러 구현 |
 | `C/expert_c/ch1/` | Expert C 1장 예제 (포인터, 선언 해석 등) |
-| `C++/HighendC++/` | 명품 C++ 교재 ch5~ch9 예제 및 연습문제 |
+| `C++/HighendC++/` | 명품 C++ 교재 ch5~ch10 예제 및 연습문제 |
 | `C++/HighendC++/ch8/` | 상속 (예제 4개, 연습문제 5개) |
-| `C++/HighendC++/ch9/` | 가상 함수와 추상 클래스 (예제 7개) |
+| `C++/HighendC++/ch9/` | 가상 함수와 추상 클래스 (예제 7개, 연습문제 2개) |
+| `C++/HighendC++/ch10/` | 템플릿과 STL (예제 2개) |
 | `C++/PS/atcoder/abc/` | [AtCoder](https://atcoder.jp/) ABC 시리즈 문제 풀이 (대회별 하위 폴더) |
 | `C++/PS/atcoder/awc/` | [AtCoder](https://atcoder.jp/) AWC 시리즈 문제 풀이 (대회별 하위 폴더) |
 | `C++/PS/codeforces/` | [Codeforces](https://codeforces.com/) 문제 풀이 |
