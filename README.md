@@ -32,15 +32,20 @@ C_STUDY/
 │       └── ch1/                    # 1장 예제 코드
 ├── C++/                            # C++ 학습 및 문제풀이
 │   ├── HighendC++/                 # 명품 C++ 교재 학습
-│   │   ├── ch5/                    # 함수
-│   │   │   ├── example/            # 예제 코드 (11개)
+│   │   ├── ch5/                    # 함수의 참조, 클래스 복사
+│   │   │   ├── example/            # 예제 코드 (10개)
 │   │   │   └── exercise/           # 연습문제 (7개)
-│   │   ├── ch6/                    # 클래스와 객체
+│   │   ├── ch6/                    # 함수 중복과 static
 │   │   │   ├── example/            # 예제 코드 (8개)
 │   │   │   └── exercise/           # 연습문제 (6개)
-│   │   └── ch7/                    # 생성자와 소멸자
-│   │       ├── example/            # 예제 코드 (10개)
-│   │       └── exercise/           # 연습문제 (6개)
+│   │   ├── ch7/                    # friend, 연산자 중복
+│   │   │   ├── example/            # 예제 코드 (10개)
+│   │   │   └── exercise/           # 연습문제 (6개)
+│   │   ├── ch8/                    # 상속
+│   │   │   ├── example/            # 예제 코드 (4개)
+│   │   │   └── exercise/           # 연습문제 (5개)
+│   │   └── ch9/                    # 가상 함수와 추상 클래스
+│   │       └── example/            # 예제 코드 (7개)
 │   ├── PS/                         # 알고리즘 문제풀이
 │   │   ├── atcoder/                # AtCoder 문제풀이
 │   │   │   ├── abc/                # ABC 시리즈 (대회별 하위 폴더)
@@ -65,7 +70,9 @@ C_STUDY/
 | `C/DataStructure/Stack/` | 배열·동적 스택 구현, 괄호 검사, 중위→후위 변환, 후위 계산 |
 | `C/DataStructure/queue/` | 선형·원형 큐, 덱, 은행 시뮬레이션, 버퍼 시뮬레이션, 프린트 스풀러 구현 |
 | `C/expert_c/ch1/` | Expert C 1장 예제 (포인터, 선언 해석 등) |
-| `C++/HighendC++/` | 명품 C++ 교재 ch5~ch7 예제 및 연습문제 |
+| `C++/HighendC++/` | 명품 C++ 교재 ch5~ch9 예제 및 연습문제 |
+| `C++/HighendC++/ch8/` | 상속 (예제 4개, 연습문제 5개) |
+| `C++/HighendC++/ch9/` | 가상 함수와 추상 클래스 (예제 7개) |
 | `C++/PS/atcoder/abc/` | [AtCoder](https://atcoder.jp/) ABC 시리즈 문제 풀이 (대회별 하위 폴더) |
 | `C++/PS/atcoder/awc/` | [AtCoder](https://atcoder.jp/) AWC 시리즈 문제 풀이 (대회별 하위 폴더) |
 | `C++/PS/codeforces/` | [Codeforces](https://codeforces.com/) 문제 풀이 |
@@ -104,16 +111,16 @@ gcc -o program program.c
 
 ### AtCoder
 
-| 문제 | 난이도 |
-|------|--------|
-| ABC453 B | B |
-| ABC455 C | C |
-| ABC456 B, C | B, C |
-| ABC457 B, C, D | B, C, D |
-| ABC460 A, B | A, B |
-| ABC462 A, B, C | A, B, C |
-| AWC006 1A, 1B, 2A, 2B, 3A, 3B, 8 | — |
-| AWC008 1A, 1B, 1C | — |
+| 대회 | 풀이 문제 |
+|------|-----------|
+| ABC453 | B |
+| ABC455 | C |
+| ABC456 | B, C |
+| ABC457 | B, C, D |
+| ABC460 | A, B |
+| ABC462 | A, B, C |
+| AWC006 | 1A, 1B, 2A, 2B, 3A, 3B, 8 |
+| AWC008 | 1A, 1B, 1C |
 
 ### Codeforces
 
