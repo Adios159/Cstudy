@@ -7,7 +7,7 @@
 ![Platform](https://img.shields.io/badge/platform-Windows%2011-lightgrey)
 ![Compiler](https://img.shields.io/badge/compiler-GCC%20(MinGW64)-green)
 ![AtCoder](https://img.shields.io/badge/AtCoder-ABC%20%7C%20AWC-orange)
-![Codeforces](https://img.shields.io/badge/Codeforces-Div.2-red)
+![Codeforces](https://img.shields.io/badge/Codeforces-Div.4-red)
 
 ---
 
