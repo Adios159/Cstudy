@@ -24,12 +24,12 @@
 ```
 C_STUDY/
 ├── C/                              # C 언어 학습
-│   ├── DataStructure/              # 자료구조 직접 구현
+│   ├── DataStructure&Algorithm/    # 자료구조 직접 구현
 │   │   ├── LinkedList/             # 연결 리스트 (단순/이중/원형) 및 응용
 │   │   ├── Stack/                  # 스택 구현 및 응용
 │   │   └── queue/                  # 큐 구현 및 응용
 │   └── expert_c/                   # Expert C 학습 자료
-│       └── ch1/                    # 1장 예제 코드
+│       └── ch1/                    # 1장 예제 코드 (C 기본문법 정리 & 전처리기 지시어)
 ├── C++/                            # C++ 학습 및 문제풀이
 │   ├── HighendC++/                 # 명품 C++ 교재 학습
 │   │   ├── ch5/                    # 함수의 참조, 클래스 복사
@@ -73,9 +73,9 @@ C_STUDY/
 
 | 폴더 | 설명 |
 |------|------|
-| `C/DataStructure/LinkedList/` | 단순/이중/원형 연결 리스트, 문자열·큐·스택 응용, 다항식·희소행렬·MP3 시뮬레이션 등 구현 |
-| `C/DataStructure/Stack/` | 배열·동적 스택 구현, 괄호 검사, 중위→후위 변환, 후위 계산 |
-| `C/DataStructure/queue/` | 선형·원형 큐, 덱, 은행 시뮬레이션, 버퍼 시뮬레이션, 프린트 스풀러 구현 |
+| `C/DataStructure&Algorithm/LinkedList/` | 단순/이중/원형 연결 리스트, 문자열·큐·스택 응용, 다항식·희소행렬·MP3 시뮬레이션 등 구현 |
+| `C/DataStructure&Algorithm/Stack/` | 배열·동적 스택 구현, 괄호 검사, 중위→후위 변환, 후위 계산, 브라우저 뒤로/앞으로가기 시뮬레이션 |
+| `C/DataStructure&Algorithm/queue/` | 선형·원형 큐, 덱, 은행·콜센터·버퍼 시뮬레이션, 프린트 스풀러 구현 |
 | `C/expert_c/ch1/` | Expert C 1장 예제 (포인터, 선언 해석 등) |
 | `C++/HighendC++/` | 명품 C++ 교재 ch5~ch11 예제 및 연습문제 |
 | `C++/HighendC++/ch8/` | 상속 (예제 4개, 연습문제 5개) |
@@ -147,7 +147,7 @@ gcc -o program program.c
 - [ ] Codeforces 레이팅 획득
 - [ ] C++ STL 및 알고리즘 숙달
 - [ ] 자료구조 (연결리스트, 트리, 큐 등) 직접 구현
-- [ ] Expert C/C++ 스터디 시작
+- [x] Expert C/C++ 스터디 시작
 - [ ] 소켓 프로그래밍 및 게임 서버 프로그래밍
 
 ---
@@ -177,4 +177,7 @@ gcc -o program program.c
 | 괄호 검사기 | `checkBrackets.c` | 스택으로 괄호 유효성 검사 |
 | 수식 변환·계산기 | `infixToPostfix.c`, `calcPosfix.c` | 중위→후위 변환 후 계산 |
 | 은행 시뮬레이터 | `bankSim.c`, `BankSim2Banker.c` | 큐로 창구 대기열 시뮬레이션 |
+| 콜센터 시뮬레이터 | `callCenter.c` | 덱으로 상담원 대기열 시뮬레이션 |
+| 버퍼 시뮬레이터 | `bufferSim.c` | 큐로 데이터 버퍼링 시뮬레이션 |
 | 프린트 스풀러 | `PrintSpooler.c` | 큐 기반 출력 순서 관리 |
+| 브라우저 시뮬레이터 | `browserSim.c` | 스택으로 뒤로가기/앞으로가기 구현 |
