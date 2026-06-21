@@ -4,7 +4,7 @@
 > AtCoder 및 Codeforces 문제풀이, 교재 실습, 자료구조 직접 구현을 포함합니다.
 
 ![Language](https://img.shields.io/badge/language-C%2FC%2B%2B-blue)
-![Platform](https://img.shields.io/badge/platform-Windows%2011-lightgrey)
+![Platform](https://img.shields.io/badge/platform-Windows%2010-lightgrey)
 ![Compiler](https://img.shields.io/badge/compiler-GCC%20(MinGW64)-green)
 ![AtCoder](https://img.shields.io/badge/AtCoder-ABC%20%7C%20AWC-orange)
 ![Codeforces](https://img.shields.io/badge/Codeforces-Div.4-red)
@@ -25,11 +25,13 @@
 C_STUDY/
 ├── C/                              # C 언어 학습
 │   ├── DataStructure&Algorithm/    # 자료구조 직접 구현
-│   │   ├── LinkedList/             # 연결 리스트 (단순/이중/원형) 및 응용
-│   │   ├── Stack/                  # 스택 구현 및 응용
-│   │   └── queue/                  # 큐 구현 및 응용
+│   │   └── DataStructure/
+│   │       ├── LinkedList/         # 연결 리스트 (단순/이중/원형) 및 응용
+│   │       ├── Stack/              # 스택 구현 및 응용
+│   │       └── queue/              # 큐 구현 및 응용
 │   └── expert_c/                   # Expert C 학습 자료
-│       └── ch1/                    # 1장 예제 코드 (C 기본문법 정리 & 전처리기 지시어)
+│       ├── ch1/                    # 1장 예제 코드 (C 기본문법 정리 & 전처리기 지시어)
+│       └── ch2/                    # 2장 예제 코드 (분할 컴파일, 헤더 파일 설계)
 ├── C++/                            # C++ 학습 및 문제풀이
 │   ├── HighendC++/                 # 명품 C++ 교재 학습
 │   │   ├── ch5/                    # 함수의 참조, 클래스 복사
@@ -73,10 +75,11 @@ C_STUDY/
 
 | 폴더 | 설명 |
 |------|------|
-| `C/DataStructure&Algorithm/LinkedList/` | 단순/이중/원형 연결 리스트, 문자열·큐·스택 응용, 다항식·희소행렬·MP3 시뮬레이션 등 구현 |
-| `C/DataStructure&Algorithm/Stack/` | 배열·동적 스택 구현, 괄호 검사, 중위→후위 변환, 후위 계산, 브라우저 뒤로/앞으로가기 시뮬레이션 |
-| `C/DataStructure&Algorithm/queue/` | 선형·원형 큐, 덱, 은행·콜센터·버퍼 시뮬레이션, 프린트 스풀러 구현 |
+| `C/DataStructure&Algorithm/DataStructure/LinkedList/` | 단순/이중/원형 연결 리스트, 문자열·큐·스택 응용, 다항식·희소행렬·MP3 시뮬레이션 등 구현 |
+| `C/DataStructure&Algorithm/DataStructure/Stack/` | 배열·동적 스택 구현, 괄호 검사, 중위→후위 변환, 후위 계산, 브라우저 뒤로/앞으로가기 시뮬레이션 |
+| `C/DataStructure&Algorithm/DataStructure/queue/` | 선형·원형 큐, 덱, 은행·콜센터·버퍼 시뮬레이션, 프린트 스풀러 구현 |
 | `C/expert_c/ch1/` | Expert C 1장 예제 (포인터, 선언 해석 등) |
+| `C/expert_c/ch2/` | Expert C 2장 예제 (분할 컴파일, 헤더 파일·다중 파일 함수 선언 설계) |
 | `C++/HighendC++/` | 명품 C++ 교재 ch5~ch11 예제 및 연습문제 |
 | `C++/HighendC++/ch8/` | 상속 (예제 4개, 연습문제 5개) |
 | `C++/HighendC++/ch9/` | 가상 함수와 추상 클래스 (예제 7개, 연습문제 2개) |
@@ -95,7 +98,7 @@ C_STUDY/
 - **언어**: C / C++
 - **에디터**: Visual Studio Code
 - **컴파일러**: GCC (g++) — MinGW64
-- **플랫폼**: Windows 11 64-bit
+- **플랫폼**: Windows 10 64-bit
 
 ---
 
@@ -128,6 +131,7 @@ gcc -o program program.c
 | ABC456 | B, C |
 | ABC457 | B, C, D |
 | ABC460 | A, B |
+| ABC461 | A, B |
 | ABC462 | A, B, C |
 | AWC006 | 1A, 1B, 2A, 2B, 3A, 3B, 8 |
 | AWC008 | 1A, 1B, 1C |
