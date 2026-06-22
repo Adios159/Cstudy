@@ -1,0 +1,57 @@
+total 0
+-r--r--r--  1 adios adios 0 Jun 22 10:24 arch_status
+dr-xr-xr-x  2 adios adios 0 Jun 22 10:24 attr
+-rw-r--r--  1 adios adios 0 Jun 22 10:24 autogroup
+-r--------  1 adios adios 0 Jun 22 10:24 auxv
+-r--r--r--  1 adios adios 0 Jun 22 10:24 cgroup
+--w-------  1 adios adios 0 Jun 22 10:24 clear_refs
+-r--r--r--  1 adios adios 0 Jun 22 10:24 cmdline
+-rw-r--r--  1 adios adios 0 Jun 22 10:24 comm
+-rw-r--r--  1 adios adios 0 Jun 22 10:24 coredump_filter
+-r--r--r--  1 adios adios 0 Jun 22 10:24 cpu_resctrl_groups
+lrwxrwxrwx  1 adios adios 0 Jun 22 10:24 cwd -> /home/adios/Cstudy/C/expert_c/ch4/4-6
+-r--------  1 adios adios 0 Jun 22 10:24 environ
+lrwxrwxrwx  1 adios adios 0 Jun 22 10:24 exe -> /home/adios/Cstudy/C/expert_c/ch4/4-6/ex4-6.out
+dr-x------  2 adios adios 3 Jun 22 10:24 fd
+dr-xr-xr-x  2 adios adios 0 Jun 22 10:24 fdinfo
+-rw-r--r--  1 adios adios 0 Jun 22 10:24 gid_map
+-r--------  1 adios adios 0 Jun 22 10:24 io
+-r--------  1 adios adios 0 Jun 22 10:24 ksm_merging_pages
+-r--------  1 adios adios 0 Jun 22 10:24 ksm_stat
+-r--r--r--  1 adios adios 0 Jun 22 10:24 latency
+-r--r--r--  1 adios adios 0 Jun 22 10:24 limits
+-rw-r--r--  1 adios adios 0 Jun 22 10:24 loginuid
+dr-x------  2 adios adios 0 Jun 22 10:24 map_files
+-r--r--r--  1 adios adios 0 Jun 22 10:24 maps
+-rw-------  1 adios adios 0 Jun 22 10:24 mem
+-r--r--r--  1 adios adios 0 Jun 22 10:24 mountinfo
+-r--r--r--  1 adios adios 0 Jun 22 10:24 mounts
+-r--------  1 adios adios 0 Jun 22 10:24 mountstats
+dr-xr-xr-x 51 adios adios 0 Jun 22 10:24 net
+dr-x--x--x  2 adios adios 0 Jun 22 10:24 ns
+-r--r--r--  1 adios adios 0 Jun 22 10:24 numa_maps
+-rw-r--r--  1 adios adios 0 Jun 22 10:24 oom_adj
+-r--r--r--  1 adios adios 0 Jun 22 10:24 oom_score
+-rw-r--r--  1 adios adios 0 Jun 22 10:24 oom_score_adj
+-r--------  1 adios adios 0 Jun 22 10:24 pagemap
+-r--------  1 adios adios 0 Jun 22 10:24 patch_state
+-r--------  1 adios adios 0 Jun 22 10:24 personality
+-rw-r--r--  1 adios adios 0 Jun 22 10:24 projid_map
+lrwxrwxrwx  1 adios adios 0 Jun 22 10:24 root -> /
+-rw-r--r--  1 adios adios 0 Jun 22 10:24 sched
+-r--r--r--  1 adios adios 0 Jun 22 10:24 schedstat
+-r--r--r--  1 adios adios 0 Jun 22 10:24 sessionid
+-rw-r--r--  1 adios adios 0 Jun 22 10:24 setgroups
+-r--r--r--  1 adios adios 0 Jun 22 10:24 smaps
+-r--r--r--  1 adios adios 0 Jun 22 10:24 smaps_rollup
+-r--------  1 adios adios 0 Jun 22 10:24 stack
+-r--r--r--  1 adios adios 0 Jun 22 10:24 stat
+-r--r--r--  1 adios adios 0 Jun 22 10:24 statm
+-r--r--r--  1 adios adios 0 Jun 22 10:24 status
+-r--------  1 adios adios 0 Jun 22 10:24 syscall
+dr-xr-xr-x  3 adios adios 0 Jun 22 10:24 task
+-rw-r--r--  1 adios adios 0 Jun 22 10:24 timens_offsets
+-r--r--r--  1 adios adios 0 Jun 22 10:24 timers
+-rw-rw-rw-  1 adios adios 0 Jun 22 10:24 timerslack_ns
+-rw-r--r--  1 adios adios 0 Jun 22 10:24 uid_map
+-r--r--r--  1 adios adios 0 Jun 22 10:24 wchan
