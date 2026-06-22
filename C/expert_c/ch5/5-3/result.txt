@@ -1,0 +1,30 @@
+Address of ptr1: 0x7ffce32341d8
+memory allocated by malloc at 0x597df1e3b010: 0x000x000x000x000x000x000x000x000x000x00
+Address of ptr2: 0x7ffce32341e0
+Memory allocated by calloc at 0x597df1e3c040: 0x000x000x000x000x000x000x000x000x000x00
+> 597db6706000-597db6707000 r--p 00000000 fc:00 131482                     /home/adios/Cstudy/C/expert_c/ch5/5-3/ex5-3.out
+> 597db6707000-597db6708000 r-xp 00001000 fc:00 131482                     /home/adios/Cstudy/C/expert_c/ch5/5-3/ex5-3.out
+> 597db6708000-597db6709000 r--p 00002000 fc:00 131482                     /home/adios/Cstudy/C/expert_c/ch5/5-3/ex5-3.out
+> 597db6709000-597db670a000 r--p 00002000 fc:00 131482                     /home/adios/Cstudy/C/expert_c/ch5/5-3/ex5-3.out
+> 597db670a000-597db670b000 rw-p 00003000 fc:00 131482                     /home/adios/Cstudy/C/expert_c/ch5/5-3/ex5-3.out
+> 597df1e3b000-597df1e5c000 rw-p 00000000 00:00 0                          [heap]
+> 7a1fa0e00000-7a1fa0e28000 r--p 00000000 fc:00 11504                      /usr/lib/x86_64-linux-gnu/libc.so.6
+> 7a1fa0e28000-7a1fa0fc0000 r-xp 00028000 fc:00 11504                      /usr/lib/x86_64-linux-gnu/libc.so.6
+> 7a1fa0fc0000-7a1fa100e000 r--p 001c0000 fc:00 11504                      /usr/lib/x86_64-linux-gnu/libc.so.6
+> 7a1fa100e000-7a1fa1012000 r--p 0020d000 fc:00 11504                      /usr/lib/x86_64-linux-gnu/libc.so.6
+> 7a1fa1012000-7a1fa1014000 rw-p 00211000 fc:00 11504                      /usr/lib/x86_64-linux-gnu/libc.so.6
+> 7a1fa1014000-7a1fa1021000 rw-p 00000000 00:00 0 
+> 7a1fa1195000-7a1fa1198000 rw-p 00000000 00:00 0 
+> 7a1fa119f000-7a1fa11a1000 rw-p 00000000 00:00 0 
+> 7a1fa11a1000-7a1fa11a5000 r--p 00000000 00:00 0                          [vvar]
+> 7a1fa11a5000-7a1fa11a7000 r--p 00000000 00:00 0                          [vvar_vclock]
+> 7a1fa11a7000-7a1fa11a9000 r-xp 00000000 00:00 0                          [vdso]
+> 7a1fa11a9000-7a1fa11aa000 r--p 00000000 fc:00 11458                      /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+> 7a1fa11aa000-7a1fa11d9000 r-xp 00001000 fc:00 11458                      /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+> 7a1fa11d9000-7a1fa11e4000 r--p 00030000 fc:00 11458                      /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+> 7a1fa11e4000-7a1fa11e6000 r--p 0003b000 fc:00 11458                      /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+> 7a1fa11e6000-7a1fa11e7000 rw-p 0003d000 fc:00 11458                      /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+> 7a1fa11e7000-7a1fa11e8000 rw-p 00000000 00:00 0 
+> 7ffce3214000-7ffce3235000 rw-p 00000000 00:00 0                          [stack]
+> ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
+> ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
