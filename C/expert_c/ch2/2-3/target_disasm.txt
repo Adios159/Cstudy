@@ -1,0 +1,52 @@
+
+target.o:     file format pe-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <average>:
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	89 4d 10             	mov    %ecx,0x10(%rbp)
+   7:	89 55 18             	mov    %edx,0x18(%rbp)
+   a:	8b 55 10             	mov    0x10(%rbp),%edx
+   d:	8b 45 18             	mov    0x18(%rbp),%eax
+  10:	01 d0                	add    %edx,%eax
+  12:	89 c2                	mov    %eax,%edx
+  14:	c1 ea 1f             	shr    $0x1f,%edx
+  17:	01 d0                	add    %edx,%eax
+  19:	d1 f8                	sar    $1,%eax
+  1b:	5d                   	pop    %rbp
+  1c:	c3                   	ret
+
+000000000000001d <sum>:
+  1d:	55                   	push   %rbp
+  1e:	48 89 e5             	mov    %rsp,%rbp
+  21:	48 83 ec 10          	sub    $0x10,%rsp
+  25:	48 89 4d 10          	mov    %rcx,0x10(%rbp)
+  29:	89 55 18             	mov    %edx,0x18(%rbp)
+  2c:	c7 45 fc 00 00 00 00 	movl   $0x0,-0x4(%rbp)
+  33:	c7 45 f8 00 00 00 00 	movl   $0x0,-0x8(%rbp)
+  3a:	eb 1d                	jmp    59 <sum+0x3c>
+  3c:	8b 45 f8             	mov    -0x8(%rbp),%eax
+  3f:	48 98                	cltq
+  41:	48 8d 14 85 00 00 00 	lea    0x0(,%rax,4),%rdx
+  48:	00 
+  49:	48 8b 45 10          	mov    0x10(%rbp),%rax
+  4d:	48 01 d0             	add    %rdx,%rax
+  50:	8b 00                	mov    (%rax),%eax
+  52:	01 45 fc             	add    %eax,-0x4(%rbp)
+  55:	83 45 f8 01          	addl   $0x1,-0x8(%rbp)
+  59:	8b 45 f8             	mov    -0x8(%rbp),%eax
+  5c:	3b 45 18             	cmp    0x18(%rbp),%eax
+  5f:	7c db                	jl     3c <sum+0x1f>
+  61:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  64:	48 83 c4 10          	add    $0x10,%rsp
+  68:	5d                   	pop    %rbp
+  69:	c3                   	ret
+  6a:	90                   	nop
+  6b:	90                   	nop
+  6c:	90                   	nop
+  6d:	90                   	nop
+  6e:	90                   	nop
+  6f:	90                   	nop

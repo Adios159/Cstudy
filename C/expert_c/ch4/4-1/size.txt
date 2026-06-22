@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+  14868	    212	    416	  15496	   3c88	ex4-1.out
