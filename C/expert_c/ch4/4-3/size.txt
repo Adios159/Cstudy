@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+   1235	    560	     16	   1811	    713	ex4-3.out
