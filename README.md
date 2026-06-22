@@ -28,10 +28,13 @@ C_STUDY/
 │   │   └── DataStructure/
 │   │       ├── LinkedList/         # 연결 리스트 (단순/이중/원형) 및 응용
 │   │       ├── Stack/              # 스택 구현 및 응용
-│   │       └── queue/              # 큐 구현 및 응용
+│   │       ├── queue/              # 큐 구현 및 응용
+│   │       └── tree/               # 이진 트리 구현 및 응용 (순회, 디렉토리 크기, 수식 계산, 스레드 이진 트리)
 │   └── expert_c/                   # Expert C 학습 자료
 │       ├── ch1/                    # 1장 예제 코드 (C 기본문법 정리 & 전처리기 지시어)
-│       └── ch2/                    # 2장 예제 코드 (분할 컴파일, 헤더 파일 설계)
+│       ├── ch2/                    # 2장 예제 코드 (분할 컴파일, 헤더 파일 설계)
+│       ├── ch3/                    # 3장 예제 코드 (다중 파일 함수 호출, 정적 라이브러리 설계)
+│       └── ch4/                    # 4장 예제 코드 (바이너리 크기 분석)
 ├── C++/                            # C++ 학습 및 문제풀이
 │   ├── HighendC++/                 # 명품 C++ 교재 학습
 │   │   ├── ch5/                    # 함수의 참조, 클래스 복사
@@ -78,8 +81,11 @@ C_STUDY/
 | `C/DataStructure&Algorithm/DataStructure/LinkedList/` | 단순/이중/원형 연결 리스트, 문자열·큐·스택 응용, 다항식·희소행렬·MP3 시뮬레이션 등 구현 |
 | `C/DataStructure&Algorithm/DataStructure/Stack/` | 배열·동적 스택 구현, 괄호 검사, 중위→후위 변환, 후위 계산, 브라우저 뒤로/앞으로가기 시뮬레이션 |
 | `C/DataStructure&Algorithm/DataStructure/queue/` | 선형·원형 큐, 덱, 은행·콜센터·버퍼 시뮬레이션, 프린트 스풀러 구현 |
+| `C/DataStructure&Algorithm/DataStructure/tree/` | 이진 트리 구현, 전위·중위·후위·레벨 순회, 디렉토리 크기 계산, 수식 트리 계산, 스레드 이진 트리 |
 | `C/expert_c/ch1/` | Expert C 1장 예제 (포인터, 선언 해석 등) |
 | `C/expert_c/ch2/` | Expert C 2장 예제 (분할 컴파일, 헤더 파일·다중 파일 함수 선언 설계) |
+| `C/expert_c/ch3/` | Expert C 3장 예제 (다중 파일 함수 호출, 2D/3D 극좌표-직교좌표 변환 정적 라이브러리) |
+| `C/expert_c/ch4/` | Expert C 4장 예제 (`size` 명령으로 바이너리 text/data/bss 크기 분석) |
 | `C++/HighendC++/` | 명품 C++ 교재 ch5~ch11 예제 및 연습문제 |
 | `C++/HighendC++/ch8/` | 상속 (예제 4개, 연습문제 5개) |
 | `C++/HighendC++/ch9/` | 가상 함수와 추상 클래스 (예제 7개, 연습문제 2개) |
@@ -133,6 +139,8 @@ gcc -o program program.c
 | ABC460 | A, B |
 | ABC461 | A, B |
 | ABC462 | A, B, C |
+| ABC461 | A, B |
+| ABC463 | A, B, C |
 | AWC006 | 1A, 1B, 2A, 2B, 3A, 3B, 8 |
 | AWC008 | 1A, 1B, 1C |
 
@@ -150,7 +158,7 @@ gcc -o program program.c
 - [ ] AtCoder D레벨 문제 독립 풀이
 - [ ] Codeforces 레이팅 획득
 - [ ] C++ STL 및 알고리즘 숙달
-- [ ] 자료구조 (연결리스트, 트리, 큐 등) 직접 구현
+- [x] 자료구조 (연결리스트, 트리, 큐 등) 직접 구현
 - [x] Expert C/C++ 스터디 시작
 - [ ] 소켓 프로그래밍 및 게임 서버 프로그래밍
 
@@ -185,3 +193,16 @@ gcc -o program program.c
 | 버퍼 시뮬레이터 | `bufferSim.c` | 큐로 데이터 버퍼링 시뮬레이션 |
 | 프린트 스풀러 | `PrintSpooler.c` | 큐 기반 출력 순서 관리 |
 | 브라우저 시뮬레이터 | `browserSim.c` | 스택으로 뒤로가기/앞으로가기 구현 |
+
+**트리(Tree) 구현**
+
+| 구조/응용 | 파일 | 설명 |
+|-----------|------|------|
+| 이진 트리 (정적 노드) | `tree.c` | 전위·중위·후위 순회 |
+| 이진 트리 (동적 할당) | `tree_node.c` | malloc 기반 노드 생성·해제 |
+| 이진 트리 순회 정리 | `ordering_tree.c` | 전위·중위·후위 순회 함수 정리 |
+| 반복적 중위 순회 | `inorder_with_stack.c` | 스택을 이용한 비재귀 중위 순회 |
+| 레벨 순회 (BFS) | `level_order.c` | 큐 기반 레벨 단위 순회 |
+| 디렉토리 크기 계산기 | `calc_dir.c` | 트리 재귀로 하위 노드 크기 합산 |
+| 수식 트리 계산기 | `calc_expression.c` | 연산자/피연산자 트리 재귀 평가 |
+| 스레드 이진 트리 | `thread_binary_tree.c` | 스레드로 후속자(successor) 탐색, 스택 없이 중위 순회 |
