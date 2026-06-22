@@ -1,0 +1,25 @@
+605cb7763000-605cb7764000 r--p 00000000 fc:00 131315                     /home/adios/Cstudy/C/expert_c/ch4/4-7/ex4-7.out
+605cb7764000-605cb7765000 r-xp 00001000 fc:00 131315                     /home/adios/Cstudy/C/expert_c/ch4/4-7/ex4-7.out
+605cb7765000-605cb7766000 r--p 00002000 fc:00 131315                     /home/adios/Cstudy/C/expert_c/ch4/4-7/ex4-7.out
+605cb7766000-605cb7767000 r--p 00002000 fc:00 131315                     /home/adios/Cstudy/C/expert_c/ch4/4-7/ex4-7.out
+605cb7767000-605cb7768000 rw-p 00003000 fc:00 131315                     /home/adios/Cstudy/C/expert_c/ch4/4-7/ex4-7.out
+605cd6303000-605cd6324000 rw-p 00000000 00:00 0                          [heap]
+73cfc1e00000-73cfc1e28000 r--p 00000000 fc:00 11504                      /usr/lib/x86_64-linux-gnu/libc.so.6
+73cfc1e28000-73cfc1fc0000 r-xp 00028000 fc:00 11504                      /usr/lib/x86_64-linux-gnu/libc.so.6
+73cfc1fc0000-73cfc200e000 r--p 001c0000 fc:00 11504                      /usr/lib/x86_64-linux-gnu/libc.so.6
+73cfc200e000-73cfc2012000 r--p 0020d000 fc:00 11504                      /usr/lib/x86_64-linux-gnu/libc.so.6
+73cfc2012000-73cfc2014000 rw-p 00211000 fc:00 11504                      /usr/lib/x86_64-linux-gnu/libc.so.6
+73cfc2014000-73cfc2021000 rw-p 00000000 00:00 0 
+73cfc2179000-73cfc217c000 rw-p 00000000 00:00 0 
+73cfc2182000-73cfc2184000 rw-p 00000000 00:00 0 
+73cfc2184000-73cfc2188000 r--p 00000000 00:00 0                          [vvar]
+73cfc2188000-73cfc218a000 r--p 00000000 00:00 0                          [vvar_vclock]
+73cfc218a000-73cfc218c000 r-xp 00000000 00:00 0                          [vdso]
+73cfc218c000-73cfc218d000 r--p 00000000 fc:00 11458                      /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+73cfc218d000-73cfc21bc000 r-xp 00001000 fc:00 11458                      /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+73cfc21bc000-73cfc21c7000 r--p 00030000 fc:00 11458                      /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+73cfc21c7000-73cfc21c9000 r--p 0003b000 fc:00 11458                      /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+73cfc21c9000-73cfc21ca000 rw-p 0003d000 fc:00 11458                      /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+73cfc21ca000-73cfc21cb000 rw-p 00000000 00:00 0 
+7ffdc3741000-7ffdc3762000 rw-p 00000000 00:00 0                          [stack]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
