@@ -4,7 +4,7 @@
 > AtCoder 및 Codeforces 문제풀이, 교재 실습, 자료구조 직접 구현을 포함합니다.
 
 ![Language](https://img.shields.io/badge/language-C%2FC%2B%2B-blue)
-![Platform](https://img.shields.io/badge/platform-Windows%2010-lightgrey)
+![Platform](https://img.shields.io/badge/platform-Windows%2010%20%7C%20Ubuntu%2026.04-lightgrey)
 ![Compiler](https://img.shields.io/badge/compiler-GCC%20(MinGW64)-green)
 ![AtCoder](https://img.shields.io/badge/AtCoder-ABC%20%7C%20AWC-orange)
 ![Codeforces](https://img.shields.io/badge/Codeforces-Div.4-red)
@@ -104,7 +104,7 @@ C_STUDY/
 - **언어**: C / C++
 - **에디터**: Visual Studio Code
 - **컴파일러**: GCC (g++) — MinGW64
-- **플랫폼**: Windows 10 64-bit
+- **플랫폼**: Windows 10 64-bit, Ubuntu 26.04
 
 ---
 
