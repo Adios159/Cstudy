@@ -34,7 +34,10 @@ C_STUDY/
 │       ├── ch1/                    # 1장 예제 코드 (C 기본문법 정리 & 전처리기 지시어)
 │       ├── ch2/                    # 2장 예제 코드 (분할 컴파일, 헤더 파일 설계)
 │       ├── ch3/                    # 3장 예제 코드 (다중 파일 함수 호출, 정적 라이브러리 설계)
-│       └── ch4/                    # 4장 예제 코드 (바이너리 크기 분석)
+│       ├── ch4/                    # 4장 예제 코드 (바이너리 크기 분석, 힙 세그먼트와 메모리 매핑)
+│       ├── ch5/                    # 5장 예제 코드 (malloc/calloc, 메모리 누수, 디스어셈블 분석)
+│       ├── ch6/                    # 6장 예제 코드 (C언어 객체지향 기초(구조체 캡슐화, 단순 리스트))
+│       └── ch7/                    # 7장 예제 코드 (불완전 타입(opaque pointer)으로 구조체 합성, has-a 관계)
 ├── C++/                            # C++ 학습 및 문제풀이
 │   ├── HighendC++/                 # 명품 C++ 교재 학습
 │   │   ├── ch5/                    # 함수의 참조, 클래스 복사
@@ -85,7 +88,10 @@ C_STUDY/
 | `C/expert_c/ch1/` | Expert C 1장 예제 (포인터, 선언 해석 등) |
 | `C/expert_c/ch2/` | Expert C 2장 예제 (분할 컴파일, 헤더 파일·다중 파일 함수 선언 설계) |
 | `C/expert_c/ch3/` | Expert C 3장 예제 (다중 파일 함수 호출, 2D/3D 극좌표-직교좌표 변환 정적 라이브러리) |
-| `C/expert_c/ch4/` | Expert C 4장 예제 (`size` 명령으로 바이너리 text/data/bss 크기 분석) |
+| `C/expert_c/ch4/` | Expert C 4장 예제 (`size` 명령으로 바이너리 text/data/bss 크기 분석, 힙 세그먼트와 `/proc/self/maps` 메모리 매핑) |
+| `C/expert_c/ch5/` | Expert C 5장 예제 (malloc/calloc 메모리 할당, 메모리 누수 추적, objdump 디스어셈블 분석) |
+| `C/expert_c/ch6/` | Expert C 6장 예제 (구조체 기반 캡슐화(car), 헤더 파일로 분리한 연결 리스트 모듈, 전처리/디스어셈블 결과 비교) |
+| `C/expert_c/ch7/` | Expert C 7장 예제 (불완전 타입으로 구현체 은닉, car-engine·player-gun has-a 관계 합성) |
 | `C++/HighendC++/` | 명품 C++ 교재 ch5~ch11 예제 및 연습문제 |
 | `C++/HighendC++/ch8/` | 상속 (예제 4개, 연습문제 5개) |
 | `C++/HighendC++/ch9/` | 가상 함수와 추상 클래스 (예제 7개, 연습문제 2개) |
