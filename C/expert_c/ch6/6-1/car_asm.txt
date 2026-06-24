@@ -1,0 +1,113 @@
+
+car.o:     file format pe-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <car_construct>:
+   0:	55                   	push   %rbp
+   1:	48 89 e5             	mov    %rsp,%rbp
+   4:	48 83 ec 20          	sub    $0x20,%rsp
+   8:	48 89 4d 10          	mov    %rcx,0x10(%rbp)
+   c:	48 89 55 18          	mov    %rdx,0x18(%rbp)
+  10:	48 8b 45 10          	mov    0x10(%rbp),%rax
+  14:	48 8b 55 18          	mov    0x18(%rbp),%rdx
+  18:	48 89 c1             	mov    %rax,%rcx
+  1b:	e8 00 00 00 00       	call   20 <car_construct+0x20>
+  20:	48 8b 45 10          	mov    0x10(%rbp),%rax
+  24:	66 0f ef c0          	pxor   %xmm0,%xmm0
+  28:	f2 0f 11 40 20       	movsd  %xmm0,0x20(%rax)
+  2d:	48 8b 45 10          	mov    0x10(%rbp),%rax
+  31:	66 0f ef c0          	pxor   %xmm0,%xmm0
+  35:	f2 0f 11 40 28       	movsd  %xmm0,0x28(%rax)
+  3a:	90                   	nop
+  3b:	48 83 c4 20          	add    $0x20,%rsp
+  3f:	5d                   	pop    %rbp
+  40:	c3                   	ret
+
+0000000000000041 <car_destruct>:
+  41:	55                   	push   %rbp
+  42:	48 89 e5             	mov    %rsp,%rbp
+  45:	48 89 4d 10          	mov    %rcx,0x10(%rbp)
+  49:	90                   	nop
+  4a:	5d                   	pop    %rbp
+  4b:	c3                   	ret
+
+000000000000004c <car_accelarate>:
+  4c:	55                   	push   %rbp
+  4d:	48 89 e5             	mov    %rsp,%rbp
+  50:	48 89 4d 10          	mov    %rcx,0x10(%rbp)
+  54:	48 8b 45 10          	mov    0x10(%rbp),%rax
+  58:	f2 0f 10 48 20       	movsd  0x20(%rax),%xmm1
+  5d:	f2 0f 10 05 00 00 00 	movsd  0x0(%rip),%xmm0        # 65 <car_accelarate+0x19>
+  64:	00 
+  65:	f2 0f 58 c1          	addsd  %xmm1,%xmm0
+  69:	48 8b 45 10          	mov    0x10(%rbp),%rax
+  6d:	f2 0f 11 40 20       	movsd  %xmm0,0x20(%rax)
+  72:	48 8b 45 10          	mov    0x10(%rbp),%rax
+  76:	f2 0f 10 40 28       	movsd  0x28(%rax),%xmm0
+  7b:	f2 0f 10 0d 08 00 00 	movsd  0x8(%rip),%xmm1        # 8b <car_accelarate+0x3f>
+  82:	00 
+  83:	f2 0f 5c c1          	subsd  %xmm1,%xmm0
+  87:	48 8b 45 10          	mov    0x10(%rbp),%rax
+  8b:	f2 0f 11 40 28       	movsd  %xmm0,0x28(%rax)
+  90:	48 8b 45 10          	mov    0x10(%rbp),%rax
+  94:	f2 0f 10 48 28       	movsd  0x28(%rax),%xmm1
+  99:	66 0f ef c0          	pxor   %xmm0,%xmm0
+  9d:	66 0f 2f c1          	comisd %xmm1,%xmm0
+  a1:	77 02                	ja     a5 <car_accelarate+0x59>
+  a3:	eb 0d                	jmp    b2 <car_accelarate+0x66>
+  a5:	48 8b 45 10          	mov    0x10(%rbp),%rax
+  a9:	66 0f ef c0          	pxor   %xmm0,%xmm0
+  ad:	f2 0f 11 40 28       	movsd  %xmm0,0x28(%rax)
+  b2:	90                   	nop
+  b3:	5d                   	pop    %rbp
+  b4:	c3                   	ret
+
+00000000000000b5 <car_brake>:
+  b5:	55                   	push   %rbp
+  b6:	48 89 e5             	mov    %rsp,%rbp
+  b9:	48 89 4d 10          	mov    %rcx,0x10(%rbp)
+  bd:	48 8b 45 10          	mov    0x10(%rbp),%rax
+  c1:	f2 0f 10 40 20       	movsd  0x20(%rax),%xmm0
+  c6:	f2 0f 10 0d 10 00 00 	movsd  0x10(%rip),%xmm1        # de <car_brake+0x29>
+  cd:	00 
+  ce:	f2 0f 5c c1          	subsd  %xmm1,%xmm0
+  d2:	48 8b 45 10          	mov    0x10(%rbp),%rax
+  d6:	f2 0f 11 40 20       	movsd  %xmm0,0x20(%rax)
+  db:	48 8b 45 10          	mov    0x10(%rbp),%rax
+  df:	f2 0f 10 48 20       	movsd  0x20(%rax),%xmm1
+  e4:	66 0f ef c0          	pxor   %xmm0,%xmm0
+  e8:	66 0f 2f c1          	comisd %xmm1,%xmm0
+  ec:	76 0d                	jbe    fb <car_brake+0x46>
+  ee:	48 8b 45 10          	mov    0x10(%rbp),%rax
+  f2:	66 0f ef c0          	pxor   %xmm0,%xmm0
+  f6:	f2 0f 11 40 20       	movsd  %xmm0,0x20(%rax)
+  fb:	48 8b 45 10          	mov    0x10(%rbp),%rax
+  ff:	f2 0f 10 40 28       	movsd  0x28(%rax),%xmm0
+ 104:	f2 0f 10 0d 18 00 00 	movsd  0x18(%rip),%xmm1        # 124 <car_refuel+0x8>
+ 10b:	00 
+ 10c:	f2 0f 5c c1          	subsd  %xmm1,%xmm0
+ 110:	48 8b 45 10          	mov    0x10(%rbp),%rax
+ 114:	f2 0f 11 40 28       	movsd  %xmm0,0x28(%rax)
+ 119:	90                   	nop
+ 11a:	5d                   	pop    %rbp
+ 11b:	c3                   	ret
+
+000000000000011c <car_refuel>:
+ 11c:	55                   	push   %rbp
+ 11d:	48 89 e5             	mov    %rsp,%rbp
+ 120:	48 89 4d 10          	mov    %rcx,0x10(%rbp)
+ 124:	f2 0f 11 4d 18       	movsd  %xmm1,0x18(%rbp)
+ 129:	48 8b 45 10          	mov    0x10(%rbp),%rax
+ 12d:	f2 0f 10 45 18       	movsd  0x18(%rbp),%xmm0
+ 132:	f2 0f 11 40 28       	movsd  %xmm0,0x28(%rax)
+ 137:	90                   	nop
+ 138:	5d                   	pop    %rbp
+ 139:	c3                   	ret
+ 13a:	90                   	nop
+ 13b:	90                   	nop
+ 13c:	90                   	nop
+ 13d:	90                   	nop
+ 13e:	90                   	nop
+ 13f:	90                   	nop
