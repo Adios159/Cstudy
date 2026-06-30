@@ -81,13 +81,13 @@ void print_node(Node* _node) {
         printf("Prev: NULL");
     }
     else {
-        printf("Prev: &d", _node->prev->data);
-        printf("Current: &d", _node->data);
+        printf("Prev: %d", _node->prev->data);
+        printf("Current: %d", _node->data);
     }
     if(_node->next == NULL) {
         printf("Next: NULL\n");
     }
     else {
-        printf("Next: &d\n", _node->next->data);
+        printf("Next: %d\n", _node->next->data);
     }
 }
