@@ -4,8 +4,8 @@
 > AtCoder 및 Codeforces 문제풀이, 교재 실습, 자료구조 직접 구현을 포함합니다.
 
 ![Language](https://img.shields.io/badge/language-C%2FC%2B%2B-blue)
-![Platform](https://img.shields.io/badge/platform-Windows%2010%20%7C%20Ubuntu%2026.04-lightgrey)
-![Compiler](https://img.shields.io/badge/compiler-GCC%20(MinGW64)-green)
+![Platform](https://img.shields.io/badge/platform-Ubuntu%2024.04-lightgrey)
+![Compiler](https://img.shields.io/badge/compiler-GCC%20(g%2B%2B)-green)
 ![AtCoder](https://img.shields.io/badge/AtCoder-ABC%20%7C%20AWC-orange)
 ![Codeforces](https://img.shields.io/badge/Codeforces-Div.4-red)
 
@@ -24,12 +24,22 @@
 ```
 C_STUDY/
 ├── C/                              # C 언어 학습
-│   ├── DataStructure&Algorithm/    # 자료구조 직접 구현
+│   ├── DataStructure&Algorithm/    # 자료구조 & 알고리즘 직접 구현
+│   │   ├── Algorithm/
+│   │   │   └── ThisIsD&A/          # 이것이 자료구조&알고리즘이다 - 알고리즘
+│   │   │       ├── sort/           # 정렬 알고리즘 (버블/삽입/퀵/qsort)
+│   │   │       └── search/         # 검색 알고리즘 (순차/이분 탐색, 전위법, MTF)
 │   │   └── DataStructure/
-│   │       ├── LinkedList/         # 연결 리스트 (단순/이중/원형) 및 응용
-│   │       ├── Stack/              # 스택 구현 및 응용
-│   │       ├── queue/              # 큐 구현 및 응용
-│   │       └── tree/               # 이진 트리 구현 및 응용 (순회, 디렉토리 크기, 수식 계산, 스레드 이진 트리)
+│   │       ├── DatastrucureInC/    # 자료구조 직접 구현 (기존 교재 기반)
+│   │       │   ├── LinkedList/     # 연결 리스트 (단순/이중/원형) 및 응용
+│   │       │   ├── Stack/          # 스택 구현 및 응용
+│   │       │   ├── queue/          # 큐 구현 및 응용
+│   │       │   └── tree/           # 이진 트리 구현 및 응용 (순회, 디렉토리 크기, 수식 계산, 스레드 이진 트리)
+│   │       └── ThisIsD&A/          # 이것이 자료구조&알고리즘이다 - 자료구조 (진행 중)
+│   │           ├── LinkedList/     # 연결 리스트 재구현 (단순/이중)
+│   │           ├── Stack/
+│   │           ├── Queue/
+│   │           └── Tree/
 │   └── expert_c/                   # Expert C 학습 자료
 │       ├── ch1/                    # 1장 예제 코드 (C 기본문법 정리 & 전처리기 지시어)
 │       ├── ch2/                    # 2장 예제 코드 (분할 컴파일, 헤더 파일 설계)
@@ -81,10 +91,13 @@ C_STUDY/
 
 | 폴더 | 설명 |
 |------|------|
-| `C/DataStructure&Algorithm/DataStructure/LinkedList/` | 단순/이중/원형 연결 리스트, 문자열·큐·스택 응용, 다항식·희소행렬·MP3 시뮬레이션 등 구현 |
-| `C/DataStructure&Algorithm/DataStructure/Stack/` | 배열·동적 스택 구현, 괄호 검사, 중위→후위 변환, 후위 계산, 브라우저 뒤로/앞으로가기 시뮬레이션 |
-| `C/DataStructure&Algorithm/DataStructure/queue/` | 선형·원형 큐, 덱, 은행·콜센터·버퍼 시뮬레이션, 프린트 스풀러 구현 |
-| `C/DataStructure&Algorithm/DataStructure/tree/` | 이진 트리 구현, 전위·중위·후위·레벨 순회, 디렉토리 크기 계산, 수식 트리 계산, 스레드 이진 트리 |
+| `C/DataStructure&Algorithm/DataStructure/DatastrucureInC/LinkedList/` | 단순/이중/원형 연결 리스트, 문자열·큐·스택 응용, 다항식·희소행렬·MP3 시뮬레이션 등 구현 |
+| `C/DataStructure&Algorithm/DataStructure/DatastrucureInC/Stack/` | 배열·동적 스택 구현, 괄호 검사, 중위→후위 변환, 후위 계산, 브라우저 뒤로/앞으로가기 시뮬레이션 |
+| `C/DataStructure&Algorithm/DataStructure/DatastrucureInC/queue/` | 선형·원형 큐, 덱, 은행·콜센터·버퍼 시뮬레이션, 프린트 스풀러 구현 |
+| `C/DataStructure&Algorithm/DataStructure/DatastrucureInC/tree/` | 이진 트리 구현, 전위·중위·후위·레벨 순회, 디렉토리 크기 계산, 수식 트리 계산, 스레드 이진 트리 |
+| `C/DataStructure&Algorithm/DataStructure/ThisIsD&A/` | 「이것이 자료구조&알고리즘이다」 자료구조 재구현 (LinkedList/Stack/Queue/Tree, 진행 중) |
+| `C/DataStructure&Algorithm/Algorithm/ThisIsD&A/sort/` | 「이것이 자료구조&알고리즘이다」 정렬 알고리즘 (버블, 삽입, 퀵, `qsort`) |
+| `C/DataStructure&Algorithm/Algorithm/ThisIsD&A/search/` | 「이것이 자료구조&알고리즘이다」 검색 알고리즘 (순차/이분 탐색, 전위법, Move-To-Front) |
 | `C/expert_c/ch1/` | Expert C 1장 예제 (포인터, 선언 해석 등) |
 | `C/expert_c/ch2/` | Expert C 2장 예제 (분할 컴파일, 헤더 파일·다중 파일 함수 선언 설계) |
 | `C/expert_c/ch3/` | Expert C 3장 예제 (다중 파일 함수 호출, 2D/3D 극좌표-직교좌표 변환 정적 라이브러리) |
@@ -109,8 +122,8 @@ C_STUDY/
 
 - **언어**: C / C++
 - **에디터**: Visual Studio Code
-- **컴파일러**: GCC (g++) — MinGW64
-- **플랫폼**: Windows 10 64-bit, Ubuntu 26.04
+- **컴파일러**: GCC (g++)
+- **플랫폼**: Ubuntu 24.04
 
 ---
 
@@ -147,6 +160,7 @@ gcc -o program program.c
 | ABC462 | A, B, C |
 | ABC461 | A, B |
 | ABC463 | A, B, C |
+| ABC440 | A, B |
 | AWC006 | 1A, 1B, 2A, 2B, 3A, 3B, 8 |
 | AWC008 | 1A, 1B, 1C |
 
@@ -212,3 +226,27 @@ gcc -o program program.c
 | 디렉토리 크기 계산기 | `calc_dir.c` | 트리 재귀로 하위 노드 크기 합산 |
 | 수식 트리 계산기 | `calc_expression.c` | 연산자/피연산자 트리 재귀 평가 |
 | 스레드 이진 트리 | `thread_binary_tree.c` | 스레드로 후속자(successor) 탐색, 스택 없이 중위 순회 |
+
+---
+
+## 알고리즘 구현 하이라이트
+
+「이것이 자료구조&알고리즘이다」 교재 기반으로 직접 구현한 정렬·검색 알고리즘입니다.
+
+**정렬(Sort)**
+
+| 알고리즘 | 파일 | 설명 |
+|----------|------|------|
+| 버블 정렬 | `BubbleSort.c` | 인접 원소 비교 후 교환 |
+| 삽입 정렬 | `InsertionSort.c` | `memmove`로 삽입 위치 확보 |
+| 퀵 정렬 | `QuichSort.c` | 피벗 기반 분할 정복 |
+| 표준 라이브러리 정렬 | `Qsort.c` | C 표준 `qsort` 비교 함수 활용 |
+
+**검색(Search)**
+
+| 알고리즘 | 파일 | 설명 |
+|----------|------|------|
+| 순차 검색 | `sequential_search.c` | 연결 리스트를 처음부터 순회하며 탐색 |
+| 이분 검색 | `binary_search.c` | 정렬된 배열에서 절반씩 탐색 범위 축소 |
+| 전위법 검색 | `transpose.c` | 검색된 노드를 한 칸씩 앞으로 이동시켜 재검색 속도 개선 |
+| MTF(Move-To-Front) | `MoveToFront.c` | 검색된 노드를 리스트 맨 앞으로 이동시켜 재검색 속도 개선 |
