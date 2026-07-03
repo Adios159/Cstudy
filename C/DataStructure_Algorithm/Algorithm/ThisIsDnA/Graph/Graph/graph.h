@@ -17,7 +17,7 @@ typedef struct Vertex {
 
 typedef struct Edge {
     int weight;
-    struct edge* next;
+    struct Edge* next;
     Vertex* from;
     Vertex* target;
 } Edge;

@@ -23,7 +23,7 @@ Vertex* create_vertex(element data) {
     v->data = data;
     v->next = NULL;
     v->adjacencyList = NULL;
-    v->visited - NotVisited;
+    v->visited = NotVisited;
     v->index = -1;
 
     return v;
