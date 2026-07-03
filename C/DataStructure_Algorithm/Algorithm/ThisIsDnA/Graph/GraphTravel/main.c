@@ -34,7 +34,7 @@ int main(void) {
     
     add_edge(v5, create_edge(v5, v7, 0));
 
-    add_edge(v5, create_edge(v6, v7, 0));
+    add_edge(v6, create_edge(v6, v7, 0));
 
     int mode;
     printf("Enter mode(0:DFS, 1:BFS): ");

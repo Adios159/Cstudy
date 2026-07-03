@@ -24,18 +24,15 @@ void LQ_DestroyQueue( LinkedQueue* Queue )
 Node* LQ_CreateNode( Vertex* NewData )
 {
     Node* NewNode = (Node*)malloc( sizeof( Node ) );
-    NewNode->Data = (Vertex*)malloc( strlen( NewData) + 1);
+    NewNode->Data = NewData;  //  데이터를 저장한다.
 
-    strcpy(NewNode->Data, NewData);  //  데이터를 저장한다. 
-
-    NewNode->NextNode = NULL; //  다음 노드에 대한 포인터는 NULL로 초기화한다. 
+    NewNode->NextNode = NULL; //  다음 노드에 대한 포인터는 NULL로 초기화한다.
 
     return NewNode;//  노드의 주소를 반환한다. 
 }
 
 void  LQ_DestroyNode(Node* _Node )
 {
-    free(_Node->Data);
     free(_Node );
 }
 
