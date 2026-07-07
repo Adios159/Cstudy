@@ -2,12 +2,17 @@
 #include "common.h"
 
 
-ListNode* insert_first(ListNode *head, int value) {
+ListNode* create_node(element data) {
     ListNode *p = (ListNode*)malloc(sizeof(ListNode));
-    p->data = value;
-    p->link = head;
-    head = p;
-    return head;
+    p->data = data;
+    p->link = NULL;   // 힌트: 아직 리스트 어디에도 안 붙은 노드야, link는 뭐가 자연스러울까?
+    return p;
+}
+
+void insert_first(ListNode **head, ListNode *p) {
+    // p는 이미 만들어진 노드. 여기선 연결만.
+    p->link = *head;
+    *head = p;
 }
 
 ListNode* insert(ListNode *head, ListNode *pre, element value) {
