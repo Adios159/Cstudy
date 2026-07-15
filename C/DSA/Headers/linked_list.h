@@ -8,7 +8,8 @@ typedef struct ListNode{
     struct ListNode *link;
 } ListNode;
 
-ListNode* insert_first(ListNode *head, int value);
+ListNode* create_node(element data);
+void insert_first(ListNode **head, ListNode *p);
 ListNode* insert(ListNode *head, ListNode *pre, element value);
 ListNode* delete_first(ListNode *head);
 ListNode* delete_node(ListNode *head, ListNode *pre);
