@@ -27,8 +27,8 @@ int main(void) {
 
     // 연결 리스트 테스트
     ListNode *head = NULL;
-    head = insert_first(head, 1);
-    head = insert_first(head, 2);
+    insert_first(&head, create_node(1));
+    insert_first(&head, create_node(2));
     print_list(head);
 
     return 0;
