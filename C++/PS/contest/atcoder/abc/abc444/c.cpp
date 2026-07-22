@@ -20,8 +20,15 @@ int main() {
     bool l2_success = false;
     while(lo <= hi) {
         if(lo == hi) {
-            l1_success = false;
-            break;
+            if(stick[hi] == l1) {
+                l1_success = true;
+                --hi;
+                continue;
+            }
+            else if(stick[hi] < l1) {
+                l1_success = false;
+                break;
+            }
         }
         if(stick[hi] == l1) {
             --hi;
@@ -46,8 +53,15 @@ int main() {
     hi = stick.size() - 1;
     while(lo <= hi) {
         if(lo == hi) {
-            l2_success = false;
-            break;
+            if(stick[hi] == l2) {
+                l2_success = true;
+                --hi;
+                continue;
+            }
+            else if(stick[hi] < l2) {
+                l2_success = false;
+                break;
+            }
         }
         if(stick[hi] == l2) {
             --hi;
