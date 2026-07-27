@@ -13,12 +13,12 @@
 
 ## 주요 특징
 
-- **자료구조 직접 구현** — 연결 리스트·스택·큐·트리를 C로 밑바닥부터 구현, 다항식·MP3 플레이어 등 응용 프로젝트 포함
-- **알고리즘 문제풀이** — AtCoder ABC/AWC, Codeforces Div.4, SPOJ, Kattis 문제를 꾸준히 풀며 실력 향상 중 (진행 상황은 [AtCoder 트래커](C++/PS/contest/atcoder/TRACKER.md) 참고)
-- **교재 병행 학습** — 명품 C++·포르잔 C++·Expert C/C++ 교재를 통해 언어 기반 다지기
+- **자료구조 직접 구현** — 연결 리스트·스택·큐·트리를 C로 밑바닥부터 구현
+- **알고리즘 문제풀이** — AtCoder ABC/AWC, Codeforces Div.4, SPOJ, Kattis 문제풀 (진행 상황은 [AtCoder 트래커](C++/PS/contest/atcoder/TRACKER.md) 참고)
+- **교재 병행 학습** — 명품 C++·포르잔 C++(C++ 기초)·Expert C/C++ 교재를 통해 언어 기반 다지기
 - **「이것이 자료구조&알고리즘이다」 재구현** — 정렬·검색·힙·해시테이블·문자열 탐색·그래프 알고리즘과 연결리스트·스택·큐·트리 자료구조를 교재 진도에 맞춰 재구현, 분할 정복·동적 계획법 패러다임 학습 포함
-- **소켓 프로그래밍** — TCP/IP 소켓 프로그래밍 교재 기반으로 Hello World 서버/클라이언트, 저수준 파일 입출력, 프로토콜 개념, 주소체계와 데이터 정렬(엔디안), 반복적(iterative) 에코 서버, TCP 입출력 버퍼·에코 클라이언트 문제점, UDP 서버, half-close 학습 (진행 중)
-- **CLRS 스터디** — CLRS(Introduction to Algorithms) 기반 알고리즘 재구현 시작 (삽입 정렬)
+- **소켓 프로그래밍** — 윤성우의 열혈 TCP/IP 소켓 프로그래밍 교재 공부
+- **CLRS 스터디** — CLRS(Introduction to Algorithms) 스터
 
 ---
 
@@ -67,18 +67,27 @@ C_STUDY/
 │   │   │       ├── Stack/          # 배열 스택, 연결 리스트 스택, 후위 표기 계산기
 │   │   │       ├── Queue/          # 원형 큐, 연결 리스트 큐
 │   │   │       └── Tree/           # 이진 트리, 상호배타집합, 수식 트리, LCRS 트리
-│   │   ├── Headers/                # 공용 큐/스택/덱/연결 리스트 헤더 및 구현 (실습용 기반 코드)
-│   │   └── Practice/               # 챕터별 잡다한 연습 코드 (ch4, ch6)
+│   │   ├── Headers/                # 공용 자료구조 헤더 및 구현, Makefile 빌드 (실습용 기반 코드)
+│   │   │   ├── Datastructure/          # 스택/큐/덱, 연결 리스트(단순/이중/원형)
+│   │   │   └── utils/                  # 공용 유틸리티 (랜덤 생성기 등)
+│   │   └── Practice/               # 챕터별 잡다한 연습 코드 (ch4, ch6, ch7)
 │   ├── TCP-IP/                     # 소켓 프로그래밍 학습 (진행 중)
 │   │   ├── ch1/
-│   │   │   ├── hello/              # Hello World 출력 서버/클라이언트
-│   │   │   └── low_level_fileIO/   # 저수준 파일 I/O (open/read/write, fd 직렬화)
 │   │   ├── ch2/                    # 프로토콜 개념, TCP 에코 서버/클라이언트
 │   │   ├── ch3/                    # 주소체계(IP/IPv4/포트)와 데이터 정렬(엔디안 변환, inet 함수)
 │   │   ├── ch4/                    # TCP 프로토콜 스택 정리, 반복적(iterative) 에코 서버/클라이언트
 │   │   ├── ch5/                    # TCP 입출력 버퍼·연결 이론 정리, 기존 에코 클라이언트 문제점과 반복 수신(op_client/op_server)
 │   │   ├── ch6/                    # UDP 개념 정리, UDP 에코 서버/클라이언트, 소켓 주소 바인딩
-│   │   └── ch7/                    # half-close 개념 정리, 파일 송수신 서버/클라이언트(shutdown 활용)
+│   │   ├── ch7/                    # half-close 개념 정리, 파일 송수신 서버/클라이언트(shutdown 활용)
+│   │   ├── ch8/                    # DNS 개념 정리, gethostbyname/gethostbyaddr
+│   │   ├── ch9/                    # 소켓 옵션 정리, 소켓 타입·버퍼 크기 조회/설정, SO_REUSEADDR 에코 서버/클라이언트
+│   │   ├── ch10/                   # 멀티프로세스 개념 정리, fork/wait/waitpid, 좀비 프로세스, 시그널(signal/sigaction)로 좀비 제거, 멀티프로세스 반복 에코 서버/클라이언트
+│   │   ├── ch11/                   # 프로세스간 통신(IPC), 파이프(pipe) 기반 통신, 에코 스토어 서버
+│   │   ├── ch12/                   # IO 멀티플렉싱 개념 정리, select 함수, select 기반 에코 서버
+│   │   ├── ch13/                   # 다양한 입출력 함수, OOB(긴급 데이터), MSG_PEEK, readv/writev
+│   │   ├── ch14/                   # 멀티캐스트·브로드캐스트 개념, 뉴스 송수신 서버/클라이언트
+│   │   ├── ch15/                   # 소켓과 표준 입출력, FILE 스트림 기반 에코 서버/클라이언트
+│   │   └── ch16/                   # 입출력 스트림의 분리, dup를 이용한 읽기/쓰기 스트림 분할
 │   └── expert_c/                   # Expert C 학습 자료
 │       ├── ch1/                    # 1장 예제 코드 (C 기본문법 정리 & 전처리기 지시어)
 │       ├── ch2/                    # 2장 예제 코드 (분할 컴파일, 헤더 파일 설계)
@@ -87,32 +96,23 @@ C_STUDY/
 │       ├── ch5/                    # 5장 예제 코드 (malloc/calloc, 메모리 누수, 디스어셈블 분석)
 │       ├── ch6/                    # 6장 예제 코드 (C언어 객체지향 기초(구조체 캡슐화, 단순 리스트))
 │       ├── ch7/                    # 7장 예제 코드 (불완전 타입(opaque pointer)으로 구조체 합성, has-a 관계)
-│       ├── ch8/                    # 8장 예제 코드 (구조체 합성 상속(8-2), 부모 구조체 포인터 캐스팅(8-3), 다형성(8-4, animal/cat/duck))
-│       └── ch10/                   # 10장 예제 코드 (시스템 콜, truss로 시스템 콜 추적)
+│       ├── ch8/                    # 8장 예제 코드 (구조체 합성 상속, 부모 구조체 포인터 캐스팅, 다형성)
+│       ├── ch10/                   # 10장 예제 코드 (시스템 콜, truss로 시스템 콜 추적)
+│       └── ch12/                   # 12장 예제 코드 (C11 문법: __STDC_VERSION__, _Generic 제네릭 매크로, 익명 구조체/공용체)
 ├── C++/                            # C++ 학습 및 문제풀이
 │   ├── expert_C++/                 # Expert C++ 교재 학습 (진행 중)
-│   │   └── ch1/                    # 1장 예제 코드 (C++ 기초 문법 복습)
+│   │   ├── ch1/                    # 1장 예제 코드 (C++ 기초 문법 복습)
+│   │   ├── ch2/                    # 2장 예제 코드 (문자열 다루기: cstring, string, format, string_view, charconv)
+│   │   └── ch3/                    # 3장 정리 (코딩 스타일: 주석, 함수/파일 분해, 네이밍)
 │   ├── C++basic/                   # 기초 문법 다지기 교재 모음
 │   │   ├── HighendC++/             # 명품 C++ 교재 학습
 │   │   │   ├── ch5/                    # 함수의 참조, 클래스 복사
-│   │   │   │   ├── example/            # 예제 코드 (11개)
-│   │   │   │   └── exercise/           # 연습문제 (7개)
 │   │   │   ├── ch6/                    # 함수 중복과 static
-│   │   │   │   ├── example/            # 예제 코드 (8개)
-│   │   │   │   └── exercise/           # 연습문제 (6개)
 │   │   │   ├── ch7/                    # friend, 연산자 중복
-│   │   │   │   ├── example/            # 예제 코드 (10개)
-│   │   │   │   └── exercise/           # 연습문제 (6개)
 │   │   │   ├── ch8/                    # 상속
-│   │   │   │   ├── example/            # 예제 코드 (4개)
-│   │   │   │   └── exercise/           # 연습문제 (5개)
 │   │   │   ├── ch9/                    # 가상 함수와 추상 클래스
-│   │   │   │   ├── example/            # 예제 코드 (7개)
-│   │   │   │   └── exercise/           # 연습문제 (2개)
 │   │   │   ├── ch10/                   # 템플릿과 STL
-│   │   │   │   └── example/            # 예제 코드 (12개)
 │   │   │   └── ch11/                   # 표준 템플릿 라이브러리 STL
-│   │   │       └── example/            # 예제 코드 (3개)
 │   │   └── forzan_cpp/             # 포르잔 C++ 학습 코드
 │   │       ├── ch4/                    # ch4 예제
 │   │       ├── ch5/                    # ch5 예제
@@ -145,40 +145,52 @@ C_STUDY/
 
 | 폴더 | 설명 |
 |------|------|
-| `C/DSA/DataStructure/DatastrucureInC/LinkedList/` | 단순/이중/원형 연결 리스트, 문자열·큐·스택 응용, 다항식·희소행렬·MP3 시뮬레이션 등 구현 |
-| `C/DSA/DataStructure/DatastrucureInC/Stack/` | 배열·동적 스택 구현, 괄호 검사, 중위→후위 변환, 후위 계산, 브라우저 뒤로/앞으로가기 시뮬레이션 |
-| `C/DSA/DataStructure/DatastrucureInC/queue/` | 선형·원형 큐, 덱, 은행·콜센터·버퍼 시뮬레이션, 프린트 스풀러 구현 |
-| `C/DSA/DataStructure/DatastrucureInC/tree/` | 이진 트리 구현, 전위·중위·후위·레벨 순회, 디렉토리 크기 계산, 수식 트리 계산, 스레드 이진 트리 |
-| `C/DSA/DataStructure/ThisIsDnA/` | 「이것이 자료구조&알고리즘이다」 자료구조 재구현 (LinkedList(단순/이중/원형), Stack(배열/연결 리스트/계산기), Queue(원형/연결 리스트), Tree(이진 트리/상호배타집합/수식 트리/LCRS 트리), 진행 중) |
-| `C/DSA/Algorithm/ThisIsDnA/Algorithm/sort/` | 「이것이 자료구조&알고리즘이다」 정렬 알고리즘 (버블, 삽입, 퀵, `qsort`) |
-| `C/DSA/Algorithm/ThisIsDnA/Algorithm/search/` | 「이것이 자료구조&알고리즘이다」 검색 알고리즘 (순차/이분 탐색, 전위법, Move-To-Front, 이진 탐색 트리) |
-| `C/DSA/Algorithm/ThisIsDnA/Algorithm/Heap/` | 「이것이 자료구조&알고리즘이다」 힙, 우선순위 큐 |
-| `C/DSA/Algorithm/ThisIsDnA/Algorithm/HashTable/` | 「이것이 자료구조&알고리즘이다」 해싱 (나눗셈법 기본 해싱, 체이닝) |
-| `C/DSA/Algorithm/ThisIsDnA/Algorithm/StringSearch/` | 「이것이 자료구조&알고리즘이다」 문자열 탐색 (브루트포스, 카프-라빈) |
-| `C/DSA/Algorithm/ThisIsDnA/Algorithm/Graph/` | 「이것이 자료구조&알고리즘이다」 그래프 구현, DFS/BFS 순회, 위상정렬, 최소신장트리(Prim), 다익스트라 최단 경로 |
-| `C/DSA/Algorithm/ThisIsDnA/Algoruithm_paradigm/Divide_and_Counquer/` | 「이것이 자료구조&알고리즘이다」 분할 정복 (빠른 거듭제곱, 피보나치, 병합정렬) |
-| `C/DSA/Algorithm/ThisIsDnA/Algoruithm_paradigm/Dynamic_Programming/` | 「이것이 자료구조&알고리즘이다」 동적 계획법 (피보나치, 최장 공통 부분 수열(LCS) - 분할정복/동적계획법 비교) |
-| `C/DSA/Algorithm/CLRS/ch2/` | CLRS(Introduction to Algorithms) 2장 재구현 (삽입 정렬) |
-| `C/DSA/Headers/` | 큐·스택·덱·연결 리스트 공용 헤더 및 구현 (실습용 기반 코드) |
-| `C/DSA/Practice/` | 챕터별(ch4, ch6) 잡다한 연습 코드 |
-| `C/TCP-IP/ch1/hello/` | Hello World 출력 소켓 서버/클라이언트 (`hello_server.c`, `hello_client.c`) |
-| `C/TCP-IP/ch1/low_level_fileIO/` | 저수준 파일 입출력 (`open`/`read`/`write` 시스템 콜, 파일 디스크립터 직렬화) |
-| `C/TCP-IP/ch2/` | 프로토콜 개념 정리, TCP 에코 서버/클라이언트 (`tcp_server.c`, `tcp_client.c`) |
-| `C/TCP-IP/ch3/` | 주소체계(IP, IPv4, 포트)와 데이터 정렬 정리, 엔디안 변환(`endian_conv.c`), `inet_addr`/`inet_aton`/`inet_ntoa` 구현 |
-| `C/TCP-IP/ch4/` | TCP/IP 프로토콜 스택 정리, 반복적(iterative) 서버 구조 정리, 반복적 에코 서버/클라이언트 (`echo_server.c`, `echo_client.c`) |
-| `C/TCP-IP/ch5/` | TCP 입출력 버퍼·연결 3단계·슬라이딩 윈도우 정리(`TCP.md`), 기존 에코 클라이언트의 문제점과 반복 수신 해결법 정리(`echo_client.md`), 반복 수신 에코 클라이언트(`echo_client2.c`), 반복 수신 서버/클라이언트(`op_server.c`, `op_client.c`) |
-| `C/TCP-IP/ch6/` | UDP 특성·효율적 사용법 정리(`UDP.md`), UDP 에코 서버/클라이언트(`uecho_server.c`, `uecho_client.c`), 소켓 주소 바인딩 예제(`bound_host1.c`, `bound_host2.c`) |
-| `C/TCP-IP/ch7/` | half-close 개념과 `shutdown` 함수 정리(`half_close.md`), half-close 기반 파일 송수신 서버/클라이언트(`file_server.c`, `file_client.c`) |
-| `C/expert_c/ch1/` | Expert C 1장 예제 (C언어 기초 복습) |
-| `C/expert_c/ch2/` | Expert C 2장 예제 (분할 컴파일, 헤더 파일·다중 파일 함수 선언 설계) |
-| `C/expert_c/ch3/` | Expert C 3장 예제 (다중 파일 함수 호출, 2D/3D 극좌표-직교좌표 변환 정적 라이브러리) |
-| `C/expert_c/ch4/` | Expert C 4장 예제 (`size` 명령으로 바이너리 text/data/bss 크기 분석, 힙 세그먼트와 `/proc/self/maps` 메모리 매핑) |
-| `C/expert_c/ch5/` | Expert C 5장 예제 (malloc/calloc 메모리 할당, 메모리 누수 추적, objdump 디스어셈블 분석) |
-| `C/expert_c/ch6/` | Expert C 6장 예제 (구조체 기반 캡슐화(car), 헤더 파일로 분리한 연결 리스트 모듈, 전처리/디스어셈블 결과 비교) |
-| `C/expert_c/ch7/` | Expert C 7장 예제 (불완전 타입으로 구현체 은닉, car-engine·player-gun has-a 관계 합성) |
-| `C/expert_c/ch8/` | Expert C 8장 예제 (구조체 합성으로 상속 흉내(student가 person 포함, 8-2), 부모 구조체(person)를 가리키는 포인터로 캐스팅해 비공개 구현 접근(8-3), 공통 인터페이스(animal_t)를 상속받은 cat/duck의 다형성 구현(8-4)) |
-| `C/expert_c/ch10/` | Expert C 10장 예제 (시스템 콜, `truss`로 프로세스의 시스템 콜 호출 내역 추적) |
-| `C++/expert_C++/ch1/` | Expert C++ 1장 예제 (C++ 기초 문법 복습, 진행 중) |
+| `C/DSA/DataStructure/DatastrucureInC/LinkedList/` | 단순/이중/원형 연결 리스트, 다항식·희소행렬·MP3 시뮬레이션 |
+| `C/DSA/DataStructure/DatastrucureInC/Stack/` | 배열·동적 스택, 괄호 검사, 중위→후위 변환·계산, 브라우저 시뮬레이션 |
+| `C/DSA/DataStructure/DatastrucureInC/queue/` | 선형·원형 큐, 덱, 은행·콜센터·버퍼 시뮬레이션, 프린트 스풀러 |
+| `C/DSA/DataStructure/DatastrucureInC/tree/` | 이진 트리, 순회, 디렉토리 크기 계산, 수식 트리 계산, 스레드 이진 트리 |
+| `C/DSA/DataStructure/ThisIsDnA/` | 「이것이 자료구조&알고리즘이다」 자료구조 재구현 (연결 리스트, 스택, 큐, 트리) |
+| `C/DSA/Algorithm/ThisIsDnA/Algorithm/sort/` | 정렬 알고리즘 (버블, 삽입, 퀵, `qsort`) |
+| `C/DSA/Algorithm/ThisIsDnA/Algorithm/search/` | 검색 알고리즘 (순차/이분 탐색, 전위법, MTF, 이진 탐색 트리) |
+| `C/DSA/Algorithm/ThisIsDnA/Algorithm/Heap/` | 힙, 우선순위 큐 |
+| `C/DSA/Algorithm/ThisIsDnA/Algorithm/HashTable/` | 해싱 (나눗셈법, 체이닝) |
+| `C/DSA/Algorithm/ThisIsDnA/Algorithm/StringSearch/` | 문자열 탐색 (브루트포스, 카프-라빈) |
+| `C/DSA/Algorithm/ThisIsDnA/Algorithm/Graph/` | 그래프, DFS/BFS, 위상정렬, 최소신장트리(Prim), 다익스트라 |
+| `C/DSA/Algorithm/ThisIsDnA/Algoruithm_paradigm/Divide_and_Counquer/` | 분할 정복 (빠른 거듭제곱, 피보나치, 병합정렬) |
+| `C/DSA/Algorithm/ThisIsDnA/Algoruithm_paradigm/Dynamic_Programming/` | 동적 계획법 (피보나치, LCS - 분할정복/DP 비교) |
+| `C/DSA/Algorithm/CLRS/ch2/` | CLRS 2장 재구현 (삽입 정렬) |
+| `C/DSA/Headers/` | 큐·스택·덱·연결 리스트 공용 헤더, Makefile 빌드 (실습용 기반 코드) |
+| `C/DSA/Practice/` | 챕터별(ch4, ch6, ch7) 연습 코드 |
+| `C/TCP-IP/ch1/hello/` | Hello World 소켓 서버/클라이언트 |
+| `C/TCP-IP/ch1/low_level_fileIO/` | 저수준 파일 입출력 (`open`/`read`/`write`) |
+| `C/TCP-IP/ch2/` | 프로토콜 개념, TCP 에코 서버/클라이언트 |
+| `C/TCP-IP/ch3/` | 주소체계·데이터 정렬(엔디안), `inet` 함수 구현 |
+| `C/TCP-IP/ch4/` | TCP/IP 스택 정리, 반복적(iterative) 에코 서버/클라이언트 |
+| `C/TCP-IP/ch5/` | TCP 입출력 버퍼 정리, 반복 수신 에코 서버/클라이언트 |
+| `C/TCP-IP/ch6/` | UDP 개념, UDP 에코 서버/클라이언트, 소켓 주소 바인딩 |
+| `C/TCP-IP/ch7/` | half-close 개념, 파일 송수신 서버/클라이언트 |
+| `C/TCP-IP/ch8/` | DNS 개념, `gethostbyname`/`gethostbyaddr` |
+| `C/TCP-IP/ch9/` | 소켓 옵션 정리, 버퍼 크기 조회/설정, `SO_REUSEADDR` 에코 서버/클라이언트 |
+| `C/TCP-IP/ch10/` | 멀티프로세스 개념, `fork`/`wait`/`waitpid`, 시그널 기반 좀비 제거, 멀티프로세스 에코 서버/클라이언트 |
+| `C/TCP-IP/ch11/` | 프로세스간 통신(IPC), 파이프(`pipe`) 기반 통신, 에코 스토어 서버 |
+| `C/TCP-IP/ch12/` | IO 멀티플렉싱, `select` 함수, select 기반 에코 서버 |
+| `C/TCP-IP/ch13/` | OOB(긴급 데이터), `MSG_PEEK`, `readv`/`writev` |
+| `C/TCP-IP/ch14/` | 멀티캐스트·브로드캐스트, 뉴스 송수신 서버/클라이언트 |
+| `C/TCP-IP/ch15/` | 소켓과 표준 입출력, `FILE` 스트림 기반 에코 서버/클라이언트 |
+| `C/TCP-IP/ch16/` | 입출력 스트림 분리, `dup`를 이용한 읽기/쓰기 스트림 분할 |
+| `C/expert_c/ch1/` | 1장 예제 (C언어 기초 복습) |
+| `C/expert_c/ch2/` | 2장 예제 (분할 컴파일, 헤더 파일 설계) |
+| `C/expert_c/ch3/` | 3장 예제 (다중 파일 함수 호출, 정적 라이브러리) |
+| `C/expert_c/ch4/` | 4장 예제 (바이너리 크기 분석, 힙 세그먼트/메모리 매핑) |
+| `C/expert_c/ch5/` | 5장 예제 (malloc/calloc, 메모리 누수, 디스어셈블 분석) |
+| `C/expert_c/ch6/` | 6장 예제 (구조체 캡슐화, 헤더로 분리한 연결 리스트 모듈) |
+| `C/expert_c/ch7/` | 7장 예제 (불완전 타입으로 구현체 은닉, has-a 관계 합성) |
+| `C/expert_c/ch8/` | 8장 예제 (구조체 합성 상속, 포인터 캐스팅, 다형성) |
+| `C/expert_c/ch10/` | 10장 예제 (시스템 콜, `truss` 추적) |
+| `C/expert_c/ch12/` | 12장 예제 (C11 문법: `_Generic`, 익명 구조체/공용체) |
+| `C++/expert_C++/ch1/` | 1장 예제 (C++ 기초 문법 복습, 진행 중) |
+| `C++/expert_C++/ch2/` | 2장 예제 (문자열 다루기: `string`/`string_view`, `format`, `charconv`) |
+| `C++/expert_C++/ch3/` | 3장 정리 (코딩 스타일: 주석 작성법, 함수/파일 분해, 네이밍 규칙) |
 | `C++/C++basic/HighendC++/` | 명품 C++ 교재 ch5~ch11 예제 및 연습문제 |
 | `C++/C++basic/HighendC++/ch8/` | 상속 (예제 4개, 연습문제 5개) |
 | `C++/C++basic/HighendC++/ch9/` | 가상 함수와 추상 클래스 (예제 7개, 연습문제 2개) |
@@ -231,11 +243,15 @@ gcc -o program program.c
 
 ### AtCoder
 
-**ABC** (14개 대회, 37문제)
+**ABC** (19개 대회, 53문제)
 
 | 대회 | 풀이 문제 |
 |------|-----------|
+| ABC439 | A, B, C |
 | ABC440 | A, B |
+| ABC441 | A, B, C |
+| ABC442 | A, B, C |
+| ABC445 | A, B, C |
 | ABC453 | A, B |
 | ABC455 | C |
 | ABC456 | B, C |
@@ -249,8 +265,9 @@ gcc -o program program.c
 | ABC464 | A, B, C |
 | ABC465 | A, B, C |
 | ABC466 | A, B, C, D |
+| ABC467 | A, B, C, D |
 
-**AWC** (11개 대회, 22문제)
+**AWC** (14개 대회, 27문제)
 
 | 대회 | 풀이 문제 |
 |------|-----------|
@@ -259,20 +276,22 @@ gcc -o program program.c
 | AWC0063 | A, B |
 | AWC0064 | A, B, C |
 | AWC0068 | A, B |
+| AWC0071 | A, B |
 | AWC0079 | A |
 | AWC0081 | A, B, C |
+| AWC0094 | A, B |
 | AWC0103 | A, B |
 | AWC0104 | A, B |
 | AWC0108 | A, B |
 | AWC0111 | A |
+| AWC0112 | A |
 
 ### Codeforces
 
 | 문제 | 비고 |
 |------|------|
-| 50A, 71A, 112A, 158A | Div.2 A |
-| 236A, 263A, 339A, 937A | Div.2 A |
-| 1106A | Div.2 A |
+| 1106A, 1111A | Div.2 A |
+| 50A, 71A, 112A, 158A, 236A, 263A, 339A, 937A | 대회 미상(unknown) A |
 
 ### SPOJ / Kattis
 
@@ -291,7 +310,7 @@ gcc -o program program.c
 - [x] 자료구조 (연결리스트, 트리, 큐 등) 직접 구현
 - [x] Expert C/C++ 스터디 시작
 - [x] 정렬·검색·힙·해시테이블·문자열탐색·그래프(DFS/BFS, 위상정렬, 최소신장트리, 다익스트라)·분할정복·동적계획법 알고리즘 직접 구현
-- [ ] 소켓 프로그래밍 및 게임 서버 프로그래밍 (Hello World 서버, 저수준 파일 I/O, 프로토콜, 주소체계/데이터정렬, 반복적 에코 서버, TCP 버퍼·에코 클라이언트 문제점, UDP 서버, half-close까지 진행 중)
+- [ ] 소켓 프로그래밍 및 게임 서버 프로그래밍 (Hello World 서버, 저수준 파일 I/O, 프로토콜, 주소체계/데이터정렬, 반복적 에코 서버, TCP 버퍼·에코 클라이언트 문제점, UDP 서버, half-close, DNS, 소켓 옵션 설정, 멀티프로세스(fork/wait/waitpid, 시그널 기반 좀비 제거, 멀티프로세스 에코 서버), IPC(파이프), IO 멀티플렉싱(select), OOB/MSG_PEEK/readv·writev, 멀티캐스트·브로드캐스트, 소켓과 표준 입출력, dup 기반 입출력 스트림 분리까지 진행 중)
 - [ ] CLRS 알고리즘 재구현 (삽입 정렬부터 시작)
 
 ---
