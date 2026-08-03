@@ -7,18 +7,19 @@
 ![Platform](https://img.shields.io/badge/platform-Ubuntu%2024.04-lightgrey)
 ![Compiler](https://img.shields.io/badge/compiler-GCC%20(g%2B%2B)-green)
 ![AtCoder](https://img.shields.io/badge/AtCoder-ABC%20%7C%20AWC-orange)
-![Codeforces](https://img.shields.io/badge/Codeforces-Div.4-red)
+![Codeforces](https://img.shields.io/badge/Codeforces-Div.2%20%7C%20Div.3-red)
 
 ---
 
 ## 주요 특징
 
 - **자료구조 직접 구현** — 연결 리스트·스택·큐·트리를 C로 밑바닥부터 구현
-- **알고리즘 문제풀이** — AtCoder ABC/AWC, Codeforces Div.4, SPOJ, Kattis 문제풀 (진행 상황은 [AtCoder 트래커](C++/PS/contest/atcoder/TRACKER.md) 참고)
-- **교재 병행 학습** — 명품 C++·포르잔 C++(C++ 기초)·Expert C/C++ 교재를 통해 언어 기반 다지기
+- **알고리즘 문제풀이** — AtCoder ABC/AWC, Codeforces Div.2/Div.3, SPOJ, Kattis 문제풀 (진행 상황은 [AtCoder 트래커](C++/PS/contest/atcoder/TRACKER.md) / [Codeforces 트래커](C++/PS/contest/codeforces/TRACKER.md) 참고)
+- **교재 병행 학습** — 명품 C++·포르잔 C++(C++ 기초)·Expert C/C++ 교재를 통해 언어 기반 다지기 (잠정 중단)
 - **「이것이 자료구조&알고리즘이다」 재구현** — 정렬·검색·힙·해시테이블·문자열 탐색·그래프 알고리즘과 연결리스트·스택·큐·트리 자료구조를 교재 진도에 맞춰 재구현, 분할 정복·동적 계획법 패러다임 학습 포함
 - **소켓 프로그래밍** — 윤성우의 열혈 TCP/IP 소켓 프로그래밍 교재 공부
-- **CLRS 스터디** — CLRS(Introduction to Algorithms) 스터
+- **CLRS 스터디** — CLRS(Introduction to Algorithms) 스터디, 삽입 정렬부터 재구현
+- **실전 알고리즘 스터디** — PS를 위한 알고리즘과 계산량(1장), 누적합(2장), 이진 탐색(3장), 동적 계획법(4장), 수학적 문제(5장) 개념 정리 및 예제·연습문제 풀이 (진행 중)
 
 ---
 
@@ -87,7 +88,9 @@ C_STUDY/
 │   │   ├── ch13/                   # 다양한 입출력 함수, OOB(긴급 데이터), MSG_PEEK, readv/writev
 │   │   ├── ch14/                   # 멀티캐스트·브로드캐스트 개념, 뉴스 송수신 서버/클라이언트
 │   │   ├── ch15/                   # 소켓과 표준 입출력, FILE 스트림 기반 에코 서버/클라이언트
-│   │   └── ch16/                   # 입출력 스트림의 분리, dup를 이용한 읽기/쓰기 스트림 분할
+│   │   ├── ch16/                   # 입출력 스트림의 분리, dup를 이용한 읽기/쓰기 스트림 분할
+│   │   ├── ch17/                   # IO 멀티플렉싱 개선, epoll 기반 에코 서버 (LT/ET 방식)
+│   │   └── ch18/                   # 멀티스레딩, mutex/semaphore 기반 동기화
 │   └── expert_c/                   # Expert C 학습 자료
 │       ├── ch1/                    # 1장 예제 코드 (C 기본문법 정리 & 전처리기 지시어)
 │       ├── ch2/                    # 2장 예제 코드 (분할 컴파일, 헤더 파일 설계)
@@ -103,7 +106,11 @@ C_STUDY/
 │   ├── expert_C++/                 # Expert C++ 교재 학습 (진행 중)
 │   │   ├── ch1/                    # 1장 예제 코드 (C++ 기초 문법 복습)
 │   │   ├── ch2/                    # 2장 예제 코드 (문자열 다루기: cstring, string, format, string_view, charconv)
-│   │   └── ch3/                    # 3장 정리 (코딩 스타일: 주석, 함수/파일 분해, 네이밍)
+│   │   ├── ch3/                    # 3장 정리 (코딩 스타일: 주석, 함수/파일 분해, 네이밍)
+│   │   ├── ch4/                    # 4장 (코드 없음, 개념 정리만 진행)
+│   │   ├── ch5/                    # 5장 (코드 없음, 개념 정리만 진행)
+│   │   ├── ch6/                    # 6장 (코드 없음, 개념 정리만 진행)
+│   │   └── ch7/                    # 7장 (진행 예정, 빈 폴더)
 │   ├── C++basic/                   # 기초 문법 다지기 교재 모음
 │   │   ├── HighendC++/             # 명품 C++ 교재 학습
 │   │   │   ├── ch5/                    # 함수의 참조, 클래스 복사
@@ -119,8 +126,7 @@ C_STUDY/
 │   │       ├── ch8/                    # 파일 I/O, 다중 파일 클래스 설계
 │   │       └── ch9/                    # 참조(reference) 변수 복습
 │   └── PS/                         # 알고리즘 문제풀이
-│       ├── coding_test(prePS)/     # PS 입문 코딩테스트 연습
-│       │   └── array/              # 배열 유형 문제
+│       ├── algorithm_for_PS/        # 실전 알고리즘 교재 예제·연습문제
 │       ├── contest/                 # 대회 문제풀이
 │       │   ├── atcoder/                # AtCoder 문제풀이
 │       │   │   ├── TRACKER.md          # AtCoder 풀이 트래커 (대회/문제/날짜/복습 여부/메모)
@@ -129,12 +135,15 @@ C_STUDY/
 │       │   └── codeforces/             # Codeforces 문제풀이
 │       │       ├── TRACKER.md          # Codeforces 풀이 트래커
 │       │       ├── Div2/               # Div.2 라운드 문제 풀이 (대회별 하위 폴더)
+│       │       ├── Div3/               # Div.3 라운드 문제 풀이 (대회별 하위 폴더)
 │       │       └── unknowned/          # 대회 미상 문제 풀이
-│       └── justProblems/            # 대회 외 문제풀이
+│       └── justProblems/               # 대회 외 문제풀이
 │           ├── SPOJ/                   # SPOJ 문제풀이
-│           │   └── before 1000s/       # 1000번 이전 문제
+│           │   └── before 1000s/      # 1000번 이전 문제
 │           └── kattis/                 # Kattis 문제풀이
+├── testdata/           # expert_c/DSA 실습에서 참조하는 공용 테스트 데이터·바이너리 분석 산출물
 ├── CLAUDE.md
+├── clean_build.sh      # 하위 폴더의 컴파일 산출물(오브젝트/실행 파일)을 재귀적으로 정리하는 스크립트
 ├── .gitignore
 └── README.md
 ```
@@ -178,6 +187,8 @@ C_STUDY/
 | `C/TCP-IP/ch14/` | 멀티캐스트·브로드캐스트, 뉴스 송수신 서버/클라이언트 |
 | `C/TCP-IP/ch15/` | 소켓과 표준 입출력, `FILE` 스트림 기반 에코 서버/클라이언트 |
 | `C/TCP-IP/ch16/` | 입출력 스트림 분리, `dup`를 이용한 읽기/쓰기 스트림 분할 |
+| `C/TCP-IP/ch17/` | IO 멀티플렉싱 개선, `epoll` 기반 에코 서버 (LT/ET 방식) |
+| `C/TCP-IP/ch18/` | 멀티스레딩, `mutex`/`semaphore` 기반 동기화 |
 | `C/expert_c/ch1/` | 1장 예제 (C언어 기초 복습) |
 | `C/expert_c/ch2/` | 2장 예제 (분할 컴파일, 헤더 파일 설계) |
 | `C/expert_c/ch3/` | 3장 예제 (다중 파일 함수 호출, 정적 라이브러리) |
@@ -191,22 +202,27 @@ C_STUDY/
 | `C++/expert_C++/ch1/` | 1장 예제 (C++ 기초 문법 복습, 진행 중) |
 | `C++/expert_C++/ch2/` | 2장 예제 (문자열 다루기: `string`/`string_view`, `format`, `charconv`) |
 | `C++/expert_C++/ch3/` | 3장 정리 (코딩 스타일: 주석 작성법, 함수/파일 분해, 네이밍 규칙) |
+| `C++/expert_C++/ch4~ch6/` | 4~6장 (코드 없이 개념만 정리) |
+| `C++/expert_C++/ch7/` | 7장 (진행 예정, 빈 폴더) |
 | `C++/C++basic/HighendC++/` | 명품 C++ 교재 ch5~ch11 예제 및 연습문제 |
 | `C++/C++basic/HighendC++/ch8/` | 상속 (예제 4개, 연습문제 5개) |
 | `C++/C++basic/HighendC++/ch9/` | 가상 함수와 추상 클래스 (예제 7개, 연습문제 2개) |
 | `C++/C++basic/HighendC++/ch10/` | 템플릿과 STL (예제 12개) |
 | `C++/C++basic/HighendC++/ch11/` | 표준 템플릿 라이브러리 STL (예제 3개) |
 | `C++/C++basic/forzan_cpp/` | 포르잔 C++ ch4~ch9 예제 및 실습 |
-| `C++/PS/coding_test(prePS)/` | PS 입문 전 코딩테스트 유형별 연습 |
+| `C++/PS/algorithm_for_PS/` | 실전 알고리즘 교재 예제·연습문제 (1장 알고리즘과 계산량, 2장 누적합, 3장 이진 탐색, 4장 동적 계획법, 5장 수학적 문제, 진행 중) |
 | `C++/PS/contest/atcoder/abc/` | [AtCoder](https://atcoder.jp/) ABC 시리즈 문제 풀이 (대회별 하위 폴더) |
 | `C++/PS/contest/atcoder/awc/` | [AtCoder](https://atcoder.jp/) AWC 시리즈 문제 풀이 (대회별 하위 폴더) |
 | `C++/PS/contest/atcoder/TRACKER.md` | AtCoder 풀이 트래커 (문제·풀이 날짜·복습 필요 여부·메모) |
 | `C++/PS/contest/codeforces/` | [Codeforces](https://codeforces.com/) 문제 풀이 |
-| `C++/PS/contest/codeforces/TRACKER.md` | Codeforces 풀이 트래커 (틀만 준비, 채워나가는 중) |
+| `C++/PS/contest/codeforces/TRACKER.md` | Codeforces 풀이 트래커 (문제·풀이 날짜·복습 필요 여부·메모) |
 | `C++/PS/contest/codeforces/Div2/` | Div.2 라운드 문제 풀이 (대회별 하위 폴더) |
+| `C++/PS/contest/codeforces/Div3/` | Div.3 라운드 문제 풀이 (대회별 하위 폴더) |
 | `C++/PS/contest/codeforces/unknowned/` | 대회 미상 Codeforces 문제 풀이 |
 | `C++/PS/justProblems/SPOJ/before 1000s/` | [SPOJ](https://www.spoj.com/) 1000번 이전 문제 풀이 |
 | `C++/PS/justProblems/kattis/` | [Kattis](https://open.kattis.com/) 문제 풀이 |
+| `testdata/` | expert_c/DSA 실습에서 참조하는 공용 테스트 데이터, 바이너리 분석 산출물(`expert_c_artifacts/`) |
+| `clean_build.sh` | 하위 폴더의 컴파일 산출물(오브젝트/실행 파일)을 재귀적으로 정리하는 스크립트 |
 
 ---
 
@@ -243,15 +259,26 @@ gcc -o program program.c
 
 ### AtCoder
 
-**ABC** (19개 대회, 53문제)
+**ABC** (31개 대회, 94문제)
 
 | 대회 | 풀이 문제 |
 |------|-----------|
+| ABC437 | A, B, C, D |
+| ABC438 | A, B, C |
 | ABC439 | A, B, C |
 | ABC440 | A, B |
 | ABC441 | A, B, C |
 | ABC442 | A, B, C |
+| ABC443 | A, B, C |
+| ABC444 | A, B, C, D |
 | ABC445 | A, B, C |
+| ABC446 | A, B, C |
+| ABC447 | A, B, C, D |
+| ABC448 | A, B, C |
+| ABC449 | A, B, C |
+| ABC450 | A, B, C, D |
+| ABC451 | A, B, C |
+| ABC452 | A, B, C |
 | ABC453 | A, B |
 | ABC455 | C |
 | ABC456 | B, C |
@@ -266,8 +293,9 @@ gcc -o program program.c
 | ABC465 | A, B, C |
 | ABC466 | A, B, C, D |
 | ABC467 | A, B, C, D |
+| ABC469 | A, B, C, D |
 
-**AWC** (14개 대회, 27문제)
+**AWC** (16개 대회, 31문제)
 
 | 대회 | 풀이 문제 |
 |------|-----------|
@@ -280,18 +308,24 @@ gcc -o program program.c
 | AWC0079 | A |
 | AWC0081 | A, B, C |
 | AWC0094 | A, B |
+| AWC0100 | A, B |
 | AWC0103 | A, B |
 | AWC0104 | A, B |
 | AWC0108 | A, B |
 | AWC0111 | A |
 | AWC0112 | A |
+| AWC0124 | A, B |
 
-### Codeforces
+### Codeforces (6개 라운드 + 미상, 16문제)
 
-| 문제 | 비고 |
-|------|------|
-| 1106A, 1111A | Div.2 A |
-| 50A, 71A, 112A, 158A, 236A, 263A, 339A, 937A | 대회 미상(unknown) A |
+| 대회 | 풀이 문제 |
+|------|-----------|
+| CF 1103 (Div.3) | A, B |
+| CF 1106 (Div.2) | A |
+| CF 1107 (Div.3) | A, B |
+| CF 1109 (Div.3) | A, B |
+| CF 1111 (Div.2) | A |
+| 대회 미상(unknown) | 50A, 71A, 112A, 158A, 236A, 263A, 339A, 937A |
 
 ### SPOJ / Kattis
 
@@ -304,14 +338,15 @@ gcc -o program program.c
 
 ## 학습 목표
 
-- [ ] AtCoder D레벨 문제 독립 풀이
+- [ ] AtCoder 레이팅 1000점
 - [ ] Codeforces 레이팅 획득
 - [ ] C++ STL 및 알고리즘 숙달
 - [x] 자료구조 (연결리스트, 트리, 큐 등) 직접 구현
 - [x] Expert C/C++ 스터디 시작
 - [x] 정렬·검색·힙·해시테이블·문자열탐색·그래프(DFS/BFS, 위상정렬, 최소신장트리, 다익스트라)·분할정복·동적계획법 알고리즘 직접 구현
-- [ ] 소켓 프로그래밍 및 게임 서버 프로그래밍 (Hello World 서버, 저수준 파일 I/O, 프로토콜, 주소체계/데이터정렬, 반복적 에코 서버, TCP 버퍼·에코 클라이언트 문제점, UDP 서버, half-close, DNS, 소켓 옵션 설정, 멀티프로세스(fork/wait/waitpid, 시그널 기반 좀비 제거, 멀티프로세스 에코 서버), IPC(파이프), IO 멀티플렉싱(select), OOB/MSG_PEEK/readv·writev, 멀티캐스트·브로드캐스트, 소켓과 표준 입출력, dup 기반 입출력 스트림 분리까지 진행 중)
+- [x] 윤성우 TCP-IP 프로그래밍 
 - [ ] CLRS 알고리즘 재구현 (삽입 정렬부터 시작)
+- [ ] 실전 알고리즘 스터디 (알고리즘과 계산량부터 시작)
 
 ---
 
