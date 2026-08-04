@@ -1,0 +1,5 @@
+disk.img
+OVMF_CODE.fd
+OVMF_VARS.fd
+BOOTX64.EFI
+mnt/
