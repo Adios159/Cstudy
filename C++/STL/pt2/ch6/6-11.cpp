@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    vector<int> v(5);
+    int j = 10;
+    for(int i = 0; i < v.size(); i++) {
+        v[i] = j;
+        j += 10;
+    }
+    vector<int>::iterator it = v.begin();
+    vector<int>::const_iterator itc = v.begin();
+    const vector<int>::iterator cit = v.begin();
+    const vector<int>::const_iterator citc = v.begin();
+
+    cout << *it << endl;
+    cout << *cit << endl;
+    cout << *itc << endl;
+    cout << *citc << endl;
+
+    return 0;
+}
