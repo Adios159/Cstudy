@@ -16,10 +16,11 @@
 - **자료구조 직접 구현** — 연결 리스트·스택·큐·트리를 C로 밑바닥부터 구현
 - **알고리즘 문제풀이** — AtCoder ABC/AWC, Codeforces Div.2/Div.3, SPOJ, Kattis 문제풀 (진행 상황은 [AtCoder 트래커](C++/PS/contest/atcoder/TRACKER.md) / [Codeforces 트래커](C++/PS/contest/codeforces/TRACKER.md) 참고)
 - **교재 병행 학습** — 명품 C++·포르잔 C++(C++ 기초)·Expert C/C++ 교재를 통해 언어 기반 다지기 (잠정 중단)
+- **C++ STL 학습** — 연산자 오버로딩·함수 포인터·함수 객체·함수 템플릿부터 STL 컨테이너(시퀀스: 벡터/덱/리스트, 연관: 세트/멀티셋)까지 예제 기반 학습 (진행 중)
 - **「이것이 자료구조&알고리즘이다」 재구현** — 정렬·검색·힙·해시테이블·문자열 탐색·그래프 알고리즘과 연결리스트·스택·큐·트리 자료구조를 교재 진도에 맞춰 재구현, 분할 정복·동적 계획법 패러다임 학습 포함
 - **소켓 프로그래밍** — 윤성우의 열혈 TCP/IP 소켓 프로그래밍 교재 공부
 - **CLRS 스터디** — CLRS(Introduction to Algorithms) 스터디, 삽입 정렬부터 재구현
-- **실전 알고리즘 스터디** — PS를 위한 알고리즘과 계산량(1장), 누적합(2장), 이진 탐색(3장), 동적 계획법(4장), 수학적 문제(5장) 개념 정리 및 예제·연습문제 풀이 (진행 중)
+- **실전 알고리즘 스터디** — PS를 위한 알고리즘과 계산량(1장), 누적합(2장), 이진 탐색(3장), 동적 계획법(4장), 수학적 문제(5장), 관찰(6장), 그래프(9장) 개념 정리 및 예제·연습문제 풀이 (진행 중)
 
 ---
 
@@ -125,12 +126,22 @@ C_STUDY/
 │   │       ├── ch5/                    # ch5 예제
 │   │       ├── ch8/                    # 파일 I/O, 다중 파일 클래스 설계
 │   │       └── ch9/                    # 참조(reference) 변수 복습
+│   ├── STL/                         # C++ STL 학습 (진행 중)
+│   │   ├── pt1/                        # 1부: 연산자 오버로딩, 함수 포인터, 함수 객체, 함수 템플릿
+│   │   │   ├── ch1/                       # 연산자 오버로딩
+│   │   │   ├── ch2/                       # 함수 포인터
+│   │   │   ├── ch3/                       # 함수 객체(functor)
+│   │   │   └── ch4/                       # 함수 템플릿
+│   │   └── pt2/                        # 2부: STL 컨테이너
+│   │       ├── ch5/                       # STL 기본
+│   │       ├── ch6/                       # 시퀀스 컨테이너 (벡터, 덱, 리스트)
+│   │       └── ch7/                       # 연관 컨테이너 (세트, 멀티셋, 진행 중)
 │   └── PS/                         # 알고리즘 문제풀이
-│       ├── algorithm_for_PS/        # 실전 알고리즘 교재 예제·연습문제
+│       ├── algorithm_for_PS/        # 실전 알고리즘 교재 예제·연습문제 (ch1~ch6, ch9)
 │       ├── contest/                 # 대회 문제풀이
 │       │   ├── atcoder/                # AtCoder 문제풀이
 │       │   │   ├── TRACKER.md          # AtCoder 풀이 트래커 (대회/문제/날짜/복습 여부/메모)
-│       │   │   ├── abc/                # ABC 시리즈 (대회별 하위 폴더)
+│       │   │   ├── abc/                # ABC 시리즈 (100번대 구간별 폴더 → 대회별 하위 폴더)
 │       │   │   └── awc/                # AWC 시리즈 (대회별 하위 폴더)
 │       │   └── codeforces/             # Codeforces 문제풀이
 │       │       ├── TRACKER.md          # Codeforces 풀이 트래커
@@ -138,9 +149,12 @@ C_STUDY/
 │       │       ├── Div3/               # Div.3 라운드 문제 풀이 (대회별 하위 폴더)
 │       │       └── unknowned/          # 대회 미상 문제 풀이
 │       └── justProblems/               # 대회 외 문제풀이
-│           ├── SPOJ/                   # SPOJ 문제풀이
-│           │   └── before 1000s/      # 1000번 이전 문제
-│           └── kattis/                 # Kattis 문제풀이
+│           ├── contest/                # 연습/모의 대회 (UCPC 등)
+│           │   └── UCPC/                  # UCPC 예선/본선 대비 문제 풀이
+│           └── online_judge/           # 단발성 온라인 저지 문제풀이
+│               ├── SPOJ/                   # SPOJ 문제풀이
+│               │   └── before 1000s/          # 1000번 이전 문제
+│               └── kattis/                 # Kattis 문제풀이
 ├── testdata/           # expert_c/DSA 실습에서 참조하는 공용 테스트 데이터·바이너리 분석 산출물
 ├── CLAUDE.md
 ├── clean_build.sh      # 하위 폴더의 컴파일 산출물(오브젝트/실행 파일)을 재귀적으로 정리하는 스크립트
@@ -210,8 +224,10 @@ C_STUDY/
 | `C++/C++basic/HighendC++/ch10/` | 템플릿과 STL (예제 12개) |
 | `C++/C++basic/HighendC++/ch11/` | 표준 템플릿 라이브러리 STL (예제 3개) |
 | `C++/C++basic/forzan_cpp/` | 포르잔 C++ ch4~ch9 예제 및 실습 |
-| `C++/PS/algorithm_for_PS/` | 실전 알고리즘 교재 예제·연습문제 (1장 알고리즘과 계산량, 2장 누적합, 3장 이진 탐색, 4장 동적 계획법, 5장 수학적 문제, 진행 중) |
-| `C++/PS/contest/atcoder/abc/` | [AtCoder](https://atcoder.jp/) ABC 시리즈 문제 풀이 (대회별 하위 폴더) |
+| `C++/STL/pt1/` | 연산자 오버로딩, 함수 포인터, 함수 객체, 함수 템플릿 예제 |
+| `C++/STL/pt2/` | STL 기본, 시퀀스 컨테이너(벡터/덱/리스트), 연관 컨테이너(세트/멀티셋, 진행 중) |
+| `C++/PS/algorithm_for_PS/` | 실전 알고리즘 교재 예제·연습문제 (1장 알고리즘과 계산량, 2장 누적합, 3장 이진 탐색, 4장 동적 계획법, 5장 수학적 문제, 6장 관찰, 9장 그래프, 진행 중) |
+| `C++/PS/contest/atcoder/abc/` | [AtCoder](https://atcoder.jp/) ABC 시리즈 문제 풀이 (100번대 구간 폴더 → 대회별 하위 폴더) |
 | `C++/PS/contest/atcoder/awc/` | [AtCoder](https://atcoder.jp/) AWC 시리즈 문제 풀이 (대회별 하위 폴더) |
 | `C++/PS/contest/atcoder/TRACKER.md` | AtCoder 풀이 트래커 (문제·풀이 날짜·복습 필요 여부·메모) |
 | `C++/PS/contest/codeforces/` | [Codeforces](https://codeforces.com/) 문제 풀이 |
@@ -219,8 +235,9 @@ C_STUDY/
 | `C++/PS/contest/codeforces/Div2/` | Div.2 라운드 문제 풀이 (대회별 하위 폴더) |
 | `C++/PS/contest/codeforces/Div3/` | Div.3 라운드 문제 풀이 (대회별 하위 폴더) |
 | `C++/PS/contest/codeforces/unknowned/` | 대회 미상 Codeforces 문제 풀이 |
-| `C++/PS/justProblems/SPOJ/before 1000s/` | [SPOJ](https://www.spoj.com/) 1000번 이전 문제 풀이 |
-| `C++/PS/justProblems/kattis/` | [Kattis](https://open.kattis.com/) 문제 풀이 |
+| `C++/PS/justProblems/contest/UCPC/` | UCPC 예선/본선 대비 문제 풀이 |
+| `C++/PS/justProblems/online_judge/SPOJ/before 1000s/` | [SPOJ](https://www.spoj.com/) 1000번 이전 문제 풀이 |
+| `C++/PS/justProblems/online_judge/kattis/` | [Kattis](https://open.kattis.com/) 문제 풀이 |
 | `testdata/` | expert_c/DSA 실습에서 참조하는 공용 테스트 데이터, 바이너리 분석 산출물(`expert_c_artifacts/`) |
 | `clean_build.sh` | 하위 폴더의 컴파일 산출물(오브젝트/실행 파일)을 재귀적으로 정리하는 스크립트 |
 
@@ -259,10 +276,12 @@ gcc -o program program.c
 
 ### AtCoder
 
-**ABC** (31개 대회, 94문제)
+**ABC** (35개 대회, 107문제)
 
 | 대회 | 풀이 문제 |
 |------|-----------|
+| ABC435 | A, B, C |
+| ABC436 | A, B, C |
 | ABC437 | A, B, C, D |
 | ABC438 | A, B, C |
 | ABC439 | A, B, C |
@@ -293,7 +312,9 @@ gcc -o program program.c
 | ABC465 | A, B, C |
 | ABC466 | A, B, C, D |
 | ABC467 | A, B, C, D |
+| ABC468 | A, B, C |
 | ABC469 | A, B, C, D |
+| ABC470 | A, B, C, D |
 
 **AWC** (16개 대회, 31문제)
 
@@ -333,6 +354,12 @@ gcc -o program program.c
 |--------|------|------|
 | [SPOJ](https://www.spoj.com/) | 74 | 약수의 합 (에라토스테네스 체 응용) |
 | [Kattis](https://open.kattis.com/) | 99 Problems, lv_able | 문자열/구현 문제 |
+
+### 모의대회 (UCPC)
+
+| 대회 | 풀이 문제 |
+|------|-----------|
+| UCPC 2026 예선 | A, B |
 
 ---
 
@@ -493,3 +520,26 @@ CLRS(Introduction to Algorithms) 교재 기반으로 재구현한 알고리즘�
 | 알고리즘 | 파일 | 설명 |
 |----------|------|------|
 | 삽입 정렬 | `CLRS/ch2/insertation_sort.c` | 배열을 앞에서부터 순회하며 정렬된 부분에 키 값을 삽입 |
+
+---
+
+## STL 학습 하이라이트
+
+C++ STL 학습 중 구현한 예제입니다 (진행 중).
+
+**언어 기반 (`STL/pt1/`)**
+
+| 주제 | 파일 | 설명 |
+|------|------|------|
+| 연산자 오버로딩 | `pt1/ch1/1-1.cpp` ~ `1-12.cpp` | 산술·비교·증감·첨자 연산자 등 멤버/전역 함수 오버로딩 |
+| 함수 포인터 | `pt1/ch2/2-1.cpp` ~ `2-4.cpp` | 함수를 가리키는 포인터 선언과 콜백 활용 |
+| 함수 객체(functor) | `pt1/ch3/3-1.cpp` ~ `3-3.cpp` | `operator()`를 오버로딩한 함수 객체 구현 |
+| 함수 템플릿 | `pt1/ch4/4-1.cpp` ~ `4-4.cpp` | 제네릭 함수 템플릿 정의 |
+
+**STL 컨테이너 (`STL/pt2/`)**
+
+| 주제 | 파일 | 설명 |
+|------|------|------|
+| STL 기본 | `pt2/ch5/5-1.cpp` ~ `5-8.cpp` | 컨테이너·반복자·알고리즘 3요소 개념 정리 |
+| 시퀀스 컨테이너 | `pt2/ch6/6-1.cpp` ~ `6-25.cpp` | 벡터, 덱, 리스트 사용법과 반복자 활용 |
+| 연관 컨테이너 | `pt2/ch7/7-1.cpp` ~ `7-9.cpp` | 세트, 멀티셋 (진행 중, 맵 예정) |
