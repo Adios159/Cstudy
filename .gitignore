@@ -18,6 +18,8 @@
 # 디버그 관련
 *.pdb
 *.ilk
+*.png
+*.zip
 
 # CMake 쓴다면
 build/
@@ -34,3 +36,6 @@ C/TCP-IP/ch15/data.txt
 C/TCP-IP/ch15/cpy.txt 
 C/TCP-IP/ch15/news.txt
 August.txt
+C/DSA/Class/week11/20253763 정도균.zip
+C/DSA/Class/week11/Dijkstra.png
+C/DSA/Class/week11/Floyd.png
