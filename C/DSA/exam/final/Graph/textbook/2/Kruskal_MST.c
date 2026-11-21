@@ -29,16 +29,16 @@ void set_union(int a, int b) {
         parent[root1] = root2;
 }
 
-typedef struct edge {
+typedef struct Edge {
     int start;
     int end;
     int weight;
-} edge;
+} Edge;
 
 typedef struct GraphType {
     int no_v;
     int no_e;
-    struct edge edges[2 * MAX_VERTICES];
+    struct Edge edges[2 * MAX_VERTICES];
 } GraphType;
 
 void graph_init(GraphType *g, int v) {
@@ -51,4 +51,17 @@ void insert_edge(GraphType *g, int start, int end, int w) {
         fprintf(stderr, "EDGE OVERFLOW!");
         exit(1);
     }
+}
+
+int compare(const void* a, const void* b) {
+    struct Edge* x = (struct Edge*)a;
+    struct Edge* y = (struct Edge*)b;
+    if(x->weight == y->weight) {
+        return x->start - y->start;
+    }
+    return x->weight - y->weight;
+}
+
+void kruskal(GraphType *g) {
+    
 }
