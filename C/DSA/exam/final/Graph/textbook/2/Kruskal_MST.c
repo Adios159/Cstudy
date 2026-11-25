@@ -51,6 +51,10 @@ void insert_edge(GraphType *g, int start, int end, int w) {
         fprintf(stderr, "EDGE OVERFLOW!");
         exit(1);
     }
+    g->edges[g->no_e].start = start;
+    g->edges[g->no_e].end = end;
+    g->edges[g->no_e].weight = w;
+    g->no_e++;
 }
 
 int compare(const void* a, const void* b) {
@@ -63,5 +67,46 @@ int compare(const void* a, const void* b) {
 }
 
 void kruskal(GraphType *g) {
-    
+    int edge_accepted = 0;
+    int uset, vset;
+    struct Edge e;
+
+    set_init(g->no_v);
+    qsort(g->edges, g->no_e, sizeof(struct Edge), compare);
+
+    printf("Kruskal MST algorithm\n");
+    int i = 0;
+    while(edge_accepted < (g->no_v - 1) && i < g->no_e) {
+        e = g->edges[i];
+        uset = set_find(e.start);
+        vset = set_find(e.end);
+        if(uset != vset) {
+            printf("edge %d: (%d -> %d) (cost: %d) selected\n", edge_accepted + 1, e.start, e.end, e.weight);
+            edge_accepted++;
+            set_union(uset, vset);
+        }
+        i++;
+    }
+    if(edge_accepted < (g->no_v - 1)) {
+        printf("NO SET! CANNOT MAKE  TREE!\n");
+    }
+}
+
+int main(void) {
+    GraphType *g = (GraphType*)malloc(sizeof(GraphType));
+    graph_init(g, 7);
+
+    insert_edge(g, 0, 1, 29);
+    insert_edge(g, 1, 2, 16);
+    insert_edge(g, 2, 3, 12);
+    insert_edge(g, 3, 4, 22);
+    insert_edge(g, 4, 5, 27);
+    insert_edge(g, 5, 0, 10);
+    insert_edge(g, 6, 1, 15);
+    insert_edge(g, 6, 3, 18);
+    insert_edge(g, 6, 4, 25);
+
+    kruskal(g);
+    free(g);
+    return 0;
 }
